@@ -1,60 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=WindSong:wght@500&display=swap');
-body{
-    background: radial-gradient(#FEAC5E, #C779D0, #4bc0c8);
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=WindSong:wght@500&display=swap");
+body {
+  background: radial-gradient(#feac5e, #c779d0, #4bc0c8);
 }
-.container{
-    display:flex;
+.container {
+  display: flex;
 }
-.card{
-    width: 500px;
-    height: 700px;
-    background: linear-gradient(135deg, #f1c40f, #f39c12, #e67e22, #d35400, #e74c3c, #c0392b);
-border-radius: 5%;
-margin: auto;
-margin-top: 50px;
+.card {
+  width: 500px;
+  height: 700px;
+  background: linear-gradient(
+    135deg,
+    #f1c40f,
+    #f39c12,
+    #e67e22,
+    #d35400,
+    #e74c3c,
+    #c0392b
+  );
+  border-radius: 5%;
+  margin: auto;
+  margin-top: 50px;
 }
-.BD{
-margin: auto;
-    text-align: center;
-    font-size: 300%;
-    font-family:'MonteCarlo', cursive; 
-    line-height: 1;
-    color: blanchedalmond;
+.BD {
+  margin: auto;
+  text-align: center;
+  font-size: 300%;
+  font-family: "MonteCarlo", cursive;
+  line-height: 1;
+  color: blanchedalmond;
 }
-.invitation{
-    text-align:center;
-    font-family:'Lobster Two', cursive;
-    font-size: 150%;
-    line-height: 1;
-    color:floralwhite;
+.invitation {
+  text-align: center;
+  font-family: "Lobster Two", cursive;
+  font-size: 150%;
+  line-height: 1;
+  color: floralwhite;
 }
-#name{
-    font-family: 'MonteCarlo', cursive;
-    color: black;
+#name {
+  font-family: "MonteCarlo", cursive;
+  color: black;
 }
-#join{
-    font-style: italic;
-    font-family: 'WindSong', cursive;
-    font-size: 120%;
+#join {
+  font-style: italic;
+  font-family: "WindSong", cursive;
+  font-size: 120%;
 }
-.time{
-    text-align: center;
-    font-family: 'Lobster Two', cursive;
-    font-size: 120%;
+.time {
+  text-align: center;
+  font-family: "Lobster Two", cursive;
+  font-size: 120%;
 }
-a{
-    text-decoration: none;
-    color: black;
-    margin-left: 200px;
-    font-size: 170%;
-    font-family:  'Lobster Two', cursive;
-    transition: 2s;
-    color:darksalmon;
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 200px;
+  font-size: 170%;
+  font-family: "Lobster Two", cursive;
+  transition: 2s;
+  color: darksalmon;
 }
-a:hover{
-    transition: 2s;
-    font-size: 190%;
-    color: black;
+a:hover {
+  transition: 2s;
+  font-size: 190%;
+  color: black;
 }

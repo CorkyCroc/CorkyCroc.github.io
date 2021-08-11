@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    margin: auto;
+}
+
+.container .title {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 0px;
+    align-items: center;
+}
+.container .title p:nth-child(1){
+    font-size: 24px;
+    font-weight: 500;
+}
+.container .title p:nth-child(2){
+   color: gray;
+   width: 150px;
+   padding: 18px;
+   background-color: rgba(228, 228, 228,0.5);
+   border-radius: 20px;
+}
+.container .cart_wrapper .cart{
+    width: 350px;
+    border-radius: 5%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    transition: 1s;
+}
+.container .cart_wrapper .cart{
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+#ava{
+    width: 100%;
+    
+}
+.cart .content{
+    padding: 20px;
+}
+.cart .account {
+    display: flex;
+    justify-content: flex-start;
+}
+.cart .ava img{
+    width: 40px;
+    height: 40px;
+}
+#name{
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.account .name{
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 400px;
+}.account .name p:nth-child(1) i{
+    color: #7FBA7A;
+}
+.account .name p:nth-child(2){
+    color: #808191;
+    font-weight: 300;
+    font-size: 12px;
+}
+.account{
+    margin-bottom: 15px;
+}
+hr{
+    border-top: 1px solid rgba(228, 228, 228,0.5);
+}
+.cart .ui{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart .ui div:nth-child(1){
+    background-color: #FF754C;
+    color: white;
+    padding: 3px 15px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+.ui .watching{
+    color: #808191;
+    font: 15px;
+}
+.cart .ui .watching span::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color:#0049C6;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}

@@ -13,6 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover; */
     background: linear-gradient(120deg, #2ecc71,#9b59b6,#ecf0f1) ;
+    background-repeat: no-repeat;
 }
 a.school{
     color: #f1c40f;
