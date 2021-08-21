@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+    margin-left: 100px;
+  background: whitesmoke;
+}
+.container .title p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 32px;
+  height: 31px;
+  width: 995px;
+  margin-left: 170px;
+}
+.container .big_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    width: 137%;
+    margin-left: 70px;
+}
+.container .big_wrapper .bigimg {
+    border-radius: 5%;
+    width: 450px;
+    height: 676px;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('https://ui8-unity-gaming.herokuapp.com/img/categories-pic-1.png');
+    transition: 1s;
+    cursor: pointer;
+}
+.container .big_wrapper .bigimg:hover{
+    box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.7);
+    transition: 1s;
+}
+.bigimg .btn{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.bigimg .btn .left{
+    color: #000042;
+    font-size: 20px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.bigimg .btn .left i{
+    transform: translate(15px, 9px);
+}
+.bigimg .btn .left:hover{
+    color: white;
+    background: #9400d3;
+    transition: 1s;
+}
+.bigimg .btn .right{
+    color: #000042;
+    font-size: 20px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.bigimg .btn .right i{
+    transform: translate(17px, 9px);
+}
+.bigimg .btn .right:hover{
+    color: white;
+    background: #9400d3;
+    transition: 1s;
+}
+.bigimg .imginfo{
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    line-height: 5px;
+}
+.bigimg .imginfo .big_cate{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    width: 90px;
+    height: 24px;
+}
+.bigimg .imginfo .big_cate .cate{
+    background: rgba(108, 93, 211, 0.5);
+    border-radius: 5px;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    align-items: center  ;
+    text-align: center;
+}
+.bigimg .imginfo .gamename{
+    font-size: 24px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    transition: 1s;
+}
+.bigimg .imginfo .gamename:hover{
+    font-size: 27px;
+    transition: 1s;
+}
+.bigimg .imginfo .big_watching{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.bigimg .imginfo .big_watching span::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #7FBA7A;
+    border-radius:50%;
+    display: inline-block;
+    margin-right: 7px;
+}
+.bigimg .imginfo .big_flw p{
+    width: 80px;
+    height: 48px;
+    transform: translate(35%, 43%);
+}
+.bigimg .imginfo .big_flw{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #6C5DD3;
+    width: 100px;
+    height: 48px;
+    border-radius: 16px;
+    transition: 1s;
+}
+.bigimg .imginfo .big_flw:hover{
+    background-color: #4836c7;
+    transition: .25s;
+}
+.big_wrapper .card_wrapper{
+    width: 60%;
+}
+.card_wrapper .card .pic{
+    border-radius: 24px;
+    margin-right: 25px;
+    background-image: url('https://ui8-unity-gaming.herokuapp.com/img/categories-pic-2.png');
+    height: 188px;
+    width: 232px;
+    background-size: 120%;
+    background-position: center;
+    transition: 1s;
+}
+.card_wrapper .card .pic:hover{
+    background-size: 103.5%;
+    transition: 1s;
+}
+.big_wrapper .card_wrapper .card{
+    background: white;
+    width: 53%;
+    height: 28%;
+    padding: 8px;
+    border-radius: 24px;
+    display: flex;
+    cursor: pointer;
+}
+.card_wrapper .card .category{
+    color: #3F8CFF;
+    height: 24px;
+    width: 53px;
+    margin: 4px 0 10px 4px;
+    font-family: "Poppins", sans-serif;
+    padding: 0 20px;
+    background: rgba(108, 93, 211, 0.1) ;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+.card_wrapper .card .category:hover{
+    color: #3f6cff;
+    background: rgba(57, 43, 159,0.1);
+    transition: 1s;
+}
+.card_wrapper .card .title span{ 
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    height: 24px;
+    margin: 4px 0 8px 4px;
+    transition: 1s; 
+}
+.card_wrapper .card .title span:hover{
+    color: rgb(108, 93, 211);
+    font-size: 24px;
+    transition: 1s;
+}
+.card_wrapper .card .viewer span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #808191;
+    font-family: "Poppins", sans-serif;
+}
+.card_wrapper .card .viewer span:hover{
+    color: #808491;
+}
+.card_wrapper .card .viewer span::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #7FBA7A;
+    border-radius:50%;
+    display: inline-block;
+    margin-right: 7px;
+}
+.card_wrapper .card .follow{
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 80px;
+    height: 48px;
+    padding: 0 20px;
+    background: rgba(228, 228, 228, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    transition: 1s;
+}
+.card_wrapper .card .follow:hover{
+    color: white;
+    background: #8954f7;
+    transition: 1s;
+}
+.card_wrapper .card_2 .pic{
+    border-radius: 24px;
+    margin-right: 25px;
+    background-image: url('https://ui8-unity-gaming.herokuapp.com/img/categories-pic-3.png');
+    height: 188px;
+    width: 232px;
+    background-size: 120%;
+    background-position: center;
+    transition: 1s;
+}
+.card_wrapper .card_2 .pic:hover{
+    background-size: 103.5%;
+    transition: 1s;
+}
+.big_wrapper .card_wrapper .card_2{
+    background: white;
+    width: 53%;
+    height: 28%;
+    padding: 8px;
+    border-radius: 24px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 32px;
+}
+.card_wrapper .card_2 .category{
+    color: #3F8CFF;
+    height: 24px;
+    width: 53px;
+    margin: 4px 0 10px 4px;
+    font-family: "Poppins", sans-serif;
+    padding: 0 20px;
+    background: rgba(108, 93, 211, 0.1) ;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+.card_wrapper .card_2 .category:hover{
+    color: #3f6cff;
+    background: rgba(57, 43, 159,0.1);
+    transition: 1s;
+}
+.card_wrapper .card_2 .title span{ 
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    height: 24px;
+    margin: 4px 0 8px 4px;
+    transition: 1s; 
+}
+.card_wrapper .card_2 .title span:hover{
+    color: rgb(108, 93, 211);
+    font-size: 24px;
+    transition: 1s;
+}
+.card_wrapper .card_2 .viewer span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #808191;
+    font-family: "Poppins", sans-serif;
+}
+.card_wrapper .card_2 .viewer span:hover{
+    color: #808491;
+}
+.card_wrapper .card_2 .viewer span::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #7FBA7A;
+    border-radius:50%;
+    display: inline-block;
+    margin-right: 7px;
+}
+.card_wrapper .card_2 .follow{
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 80px;
+    height: 48px;
+    padding: 0 20px;
+    background: rgba(228, 228, 228, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    transition: 1s;
+}
+.card_wrapper .card_2 .follow:hover{
+    color: white;
+    background: #8954f7;
+    transition: 1s;
+}
+.card_wrapper .card_3 .pic{
+    border-radius: 24px;
+    margin-right: 25px;
+    background-image: url('https://ui8-unity-gaming.herokuapp.com/img/categories-pic-4.png');
+    height: 188px;
+    width: 232px;
+    background-size: 120%;
+    background-position: center;
+    transition: 1s;
+}
+.card_wrapper .card_3 .pic:hover{
+    background-size: 103.5%;
+    transition: 1s;
+}
+.big_wrapper .card_wrapper .card_3{
+    background: white;
+    width: 53%;
+    height: 28%;
+    padding: 8px;
+    border-radius: 24px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 32px;
+}
+.card_wrapper .card_3 .category{
+    color: #3F8CFF;
+    height: 24px;
+    width: 53px;
+    margin: 4px 0 10px 4px;
+    font-family: "Poppins", sans-serif;
+    padding: 0 20px;
+    background: rgba(108, 93, 211, 0.1) ;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+.card_wrapper .card_3 .category:hover{
+    color: #3f6cff;
+    background: rgba(57, 43, 159,0.1);
+    transition: 1s;
+}
+.card_wrapper .card_3 .title span{ 
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    height: 24px;
+    margin: 4px 0 8px 4px;
+    transition: 1s; 
+}
+.card_wrapper .card_3 .title span:hover{
+    color: rgb(108, 93, 211);
+    font-size: 24px;
+    transition: 1s;
+}
+.card_wrapper .card_3 .viewer span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #808191;
+    font-family: "Poppins", sans-serif;
+}
+.card_wrapper .card_3 .viewer span:hover{
+    color: #808491;
+}
+.card_wrapper .card_3 .viewer span::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #7FBA7A;
+    border-radius:50%;
+    display: inline-block;
+    margin-right: 7px;
+}
+.card_wrapper .card_3 .follow{
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 80px;
+    height: 48px;
+    padding: 0 20px;
+    background: rgba(228, 228, 228, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    transition: 1s;
+}
+.card_wrapper .card_3 .follow:hover{
+    color: white;
+    background: #8954f7;
+    transition: 1s;
+}
