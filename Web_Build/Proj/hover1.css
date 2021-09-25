@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 .menu ul {
   list-style: none;
   margin: 0;
@@ -12,7 +13,7 @@
   font-size: 22px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: darkmagenta;
   display: block;
   position: relative;
   padding: 4px 0;
@@ -33,7 +34,7 @@
   transform: scale3d(1, 1, 1);
 }
 .menu-1 a::before {
-  background: green;
+  background: #090979;
   transform-origin: 100% 50%;
 }
 .menu-1 a:hover::before {
@@ -44,7 +45,7 @@
 }
 .menu-3 a::before {
   transform-origin: 50% 50%;
-  background: #f06292;
+  background: #3f5efb;
 }
 .menu-4 a::before {
   transform-origin: 100% 50%;
