@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./hover1.css">
-    <title>Covid Update</title>
+    <link rel="stylesheet" href="./dropdown.css">
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <title>Covid-19 Update</title>
   <head>
   <body>
     <section class="header">
       <nav class="menu menu-3">
         <div class="logo">
-          <a href="./index.html"><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player></a>
+          <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
         </div>
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -23,18 +25,157 @@
       </nav>
 
       <div class="navIntro">
-        <span>We update data and news about Covid-19 every day.</span>
-      </div>
-      <div class="navBanner">
-        <div class="banner1">
-          <img src="https://m.media-amazon.com/images/I/61fi89NB84L._SL1200_.jpg" alt="">
-        </div>
-        <div class="banner2">
-          <img src="https://elements-cover-images-0.imgix.net/4960095a-e570-4f30-92f5-acb9382345c5?auto=compress&crop=edges&fit=crop&fm=jpeg&h=630&w=1200&s=437479aaf0804175e2d01b22a956f8a6" alt="">
+        <div class="Intro">
+          <p>COVID-19 AWARENESS</p>
+          <h3>STAY SAFE. STAY HOME</h3>
+          <p class="content">Stay home to protect yourself as well as the community.</p>
+          <a href="./data.html" class="cta">
+            <span>Learn More</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </a>
+          <a href="./news.html" class="cta_2">
+            <span>News</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </a>
         </div>
 
+        <div class="logoIn">
+          <img id="virus" src="./img/Virus.png" alt="">
+        </div>
       </div>
 
+    </section>
+
+    <section class="data-section">
+      <div class="title">
+        <h2>COVID-19 STATIC</h2>
+        <p>We update the static daily</p>
+      </div>
+
+      <div class="Stat_wrapper">
+        <div class="preview_stat">
+          <div class="info">
+            <div class="left">
+              <img id="icon_global" src="https://img.icons8.com/color/48/000000/vietnam-circular.png"/>
+            </div>
+            <div class="right">
+              <p>Stats Overview</p>
+              <li class="dropdown dropdown-6">
+                <div class="dr_wrapper">
+                  <span id="drop_select">Vietnam</span> <i id="dr" class="far fa-chevron-down"></i>
+                </div>
+                <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+                  <li onclick="vietnam_preview()" class="dropdown_item-1">Vietnam</li>
+                  <li onclick="global_preview()" class="dropdown_item-2">Global</li>
+                </ul>
+              </li>
+              </div>
+            </div>
+            
+            <div class="info">
+              <div class="left">
+                <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-death-virus-mutation-wanicon-lineal-color-wanicon.png"/>
+              </div>
+              <div class="right">
+                <p>Total Death</p>
+                <h3 id="death">12345</h3>
+              </div>
+            </div>
+  
+            <div class="info">
+              <div class="left">
+                <img src="https://img.icons8.com/plasticine/100/000000/treatment-plan.png"/>
+              </div>
+              <div class="right">
+                <p>In Treatment</p>
+                <h3 id="Treatment">12345</h3>
+              </div>
+            </div>
+  
+            <div class="info">            
+              <div class="left">
+                <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-virus-virus-transmission-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png"/>
+            </div>
+            <div class="right">
+              <p>Cases</p>
+              <h3 id="Cases">12345</h3>
+            </div>
+          </div>
+  
+          <div class="info">            
+            <div class="left">
+              <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-medicine-coronavirus-covid19-flatart-icons-lineal-color-flatarticons.png"/>
+          </div>
+          <div class="right">
+            <p>Recovered</p>
+            <h3 id="Recovered">12345</h3>
+          </div>
+          </div>
+      </div>
+      <div class="pre_btn">
+        <a href="./data.html" class="button">Learn More</a>
+      </div>
+          </div>
+          </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news_section">
+      <div class="news_title">
+        <h2>COVID-19 NEWS</h2>
+        <p>News from trustworthy posts</p>
+      </div>
+
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <a href="https://dantri.com.vn/suc-khoe/ghi-nhan-11-f0-lien-quan-benh-vien-viet-duc-tai-ha-noi-deu-da-duoc-cach-ly-20211014183617638.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Top3&dt_medium=1">
+      <img src="https://icdn.dantri.com.vn/2021/10/14/covidhanoi-1634210981234.jpeg" style="width: 100%">
+      <div class="text">Ghi nhận 11 F0 liên quan Bệnh viện Việt Đức tại Hà Nội, đều đã được cách ly</div>
+    </a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="https://dantri.com.vn/suc-khoe/covid19-hom-nay-tiem-mot-trieu-lieu-vaccine-42-tinh-thanh-co-ca-mac-moi-20211014183124719.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Cover&dt_medium=1">
+      <img src="https://icdn.dantri.com.vn/zoom/528_352/2021/10/14/tphcm-chien-luoc-dap-dich-covid19-khi-gian-cach-xa-hoi-toan-thanh-pho-4-1634210954634.jpeg" style="width:100%">
+      <div class="text">Covid-19 hôm nay: Tiêm một triệu liều vaccine, 42 tỉnh thành có ca mắc mới</div>
+    </a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="https://dantri.com.vn/the-gioi/so-ca-nhiem-va-tu-vong-vi-covid19-toan-cau-giam-manh-20211014143931582.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Top3&dt_medium=3">
+      <img src="https://icdn.dantri.com.vn/2021/10/14/tiem-chung-vaccine-covid19china-daily-1634197061041.jpeg" style="width:100%">
+      <div class="text">Theo Tổ chức Y tế Thế giới (WHO), số ca nhiễm và tử vong do Covid-19 toàn cầu tiếp tục xu hướng giảm trong bối cảnh các nước thúc đẩy chương trình tiêm chủng vaccine.</div>
+    </a>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+    </section>
+
+
+    <section class="footer_section">
+      
     </section>
 
 
