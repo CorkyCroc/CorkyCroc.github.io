@@ -84,3 +84,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// nav
+window.addEventListener('scroll', function () {
+  let header = document.querySelector('nav');
+  let windowPosition = window.scrollY > 0;
+  header.classList.toggle('scrolling-active', windowPosition);
+})
