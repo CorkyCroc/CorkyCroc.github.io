@@ -42,9 +42,9 @@ a {
   align-items: center;
 }
 .scrolling-active{
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 3px 1rem rgba(0,0,0,.1);
-  height: 70px !important;
+  height: 80px !important;
   transition: height 0.5s ease
 }
 
@@ -54,7 +54,8 @@ a {
 
 .scrolling-active ul li a{
   font-size: 20px !important;
-  
+  color:#596275;
+  transition:1s;
 }
 
 .scrolling-active .nav{
@@ -475,4 +476,58 @@ a {
 .show_chart {
   width: 80%;
   margin: 50px auto;
+}
+
+
+
+.footer footer {
+  margin-top: 50px;
+  clear: both;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  color: #fff;
+  background-color: #596275;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .comm {
+  position: relative;
+  top: 20px;
+}
+.footer .comm ul{
+  margin-top: 10px;
+  list-style: none;
+}
+.footer .comm ul li{
+  padding: 5px;
+}
+.footer .comm ul li a{
+  font-size: 15px;
+  transition:1s;
+}
+.footer .comm ul li a:hover{
+  font-size: 20px;
+  transition: 1s;
+}
+.footer .link{
+  position: relative;
+  right: 10%;
+  top: 20px;
+}
+.footer .link ul{
+  margin-top: 10px;
+}
+.footer .link ul li{
+  list-style: none;
+  padding: 5px;
+}
+.footer .link ul li a{
+  font-size: 15px;
+  list-style: none;
+  transition: 1s;
+}
+.footer .link ul li a:hover{
+  color: #2f3542;
+  transition: 0.5s;
 }
