@@ -18,6 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.25);
+
 }
 .header nav {
   width: 100%;
@@ -40,6 +41,43 @@ a {
   justify-content: space-around;
   width: 60%;
   align-items: center;
+}
+.scrolling-active{
+  background-color: white;
+  box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+  height: 80px !important;
+  transition: height 0.5s ease
+}
+
+.scrolling-active .logoIn{
+  scale: 0.7;
+}
+
+.scrolling-active ul li a{
+  font-size: 20px !important;
+  color:#596275;
+  transition:1s;
+}
+
+.scrolling-active .nav{
+  height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+  color: #313131;
+}
+
+.scrolling-active #nav-cta{
+  background-color: #313131;
+  color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+  background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+  background-color: #313131;
 }
 .navIntro {
   width: 80%;
@@ -455,7 +493,6 @@ a {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
- 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 1.5s linear infinite;
