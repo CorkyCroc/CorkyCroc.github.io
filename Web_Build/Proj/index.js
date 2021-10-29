@@ -53,34 +53,84 @@ let vietnam_preview = () => {
   vietnam_render();
 };
 
+async function getNews() {
+  let data = await axios.post("https://corona-api.kompa.ai/graphql", {
+    operationName: "topTrueNews",
+    variables: {},
+    query:
+      "query topTrueNews {\n  topTrueNews {\n    id\n    type\n    title\n    content\n    url\n    siteName\n    publishedDate\n    author\n    picture\n    __typename\n  }\n}\n",
+  });
+  let dataNew = data.data.data;
 
+  let dataMixed = mixData(dataNew.topTrueNews);
+  console.log(dataNew);
 
+  console.log(dataMixed);
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+  renderNews(dataMixed);
 }
+getNews();
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+function mixData(data) {
+  let result = [];
+  for (let i = 0; i < 5; i++) {
+    let randomIndex = getRandomInt(0, data.length);
+    result.push(data[randomIndex]);
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  return result;
 }
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function renderNews(data) {
+  let dom = document.querySelector("#n_");
+  dom.innerHTML = "";
+
+  for (let i = 0; i < data.length; i++) {
+    let html = `      <li class="splide__slide">
+    <div class="news_card">
+      <img src="${data[i].picture}" alt="">
+
+      <div class="news_content">
+        <p>${data[i].publishedDate}</p>
+        <h3>${data[i].title}</h3>
+        <p>${data[i].content}</p>
+        <a href="${data[i].url}" class="cta">
+          <span>Learn More</span>
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </li>`;
+
+    dom.innerHTML += html;
+  }
+  var splide = new Splide(".splide");
+  var bar = splide.root.querySelector(".my-slider-progress-bar");
+
+  // Update the bar width:
+  splide.on("mounted move", function () {
+    var end = splide.Components.Controller.getEnd() + 1;
+    bar.style.width = String((100 * (splide.index + 1)) / end) + "%";
+  });
+
+  splide.mount();
+}
+// axios.post('https://corona-api.kompa.ai/graphql', {
+//   "operationName":"topTrueNews","variables":{},"query":"query topTrueNews {\n  topTrueNews {\n    id\n    type\n    title\n    content\n    url\n    siteName\n    publishedDate\n    author\n    picture\n    __typename\n  }\n}\n"
+// })
+// .then(function (response) {
+//   console.log(response);
+// })
+// .catch(function (error) {
+//   console.log(error);
+// });

@@ -13,12 +13,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="./asset/splide.min.css">
   <head>
   <body>
     <section class="header">
       <nav class="menu menu-3">
         <div class="logo">
-          <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+          <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
         </div>
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -31,7 +32,7 @@
       <div class="navIntro">
         <div class="Intro">
           <p class="animate__animated animate__backInDown">COVID-19 AWARENESS</p>
-          <h3 class="logo-1">STAY SAFE. STAY HOME</h3>
+          <h3 class="w">STAY SAFE - STAY HOME</h3>
           <p class="content">Stay home to protect yourself as well as the community.</p>
           <a href="./data.html" class="cta">
             <span>Learn More</span>
@@ -148,55 +149,44 @@
         <h2>COVID-19 NEWS</h2>
         <p>News from trustworthy posts</p>
       </div>
+      <div class="blog_conatainer">
+        <!-- Style the bar as you like -->
 
-      <!-- Slideshow container -->
-<div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <a href="https://dantri.com.vn/suc-khoe/ghi-nhan-11-f0-lien-quan-benh-vien-viet-duc-tai-ha-noi-deu-da-duoc-cach-ly-20211014183617638.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Top3&dt_medium=1">
-      <img src="https://icdn.dantri.com.vn/2021/10/14/covidhanoi-1634210981234.jpeg" style="width: 100%">
-      <div class="text">Ghi nhận 11 F0 liên quan Bệnh viện Việt Đức tại Hà Nội, đều đã được cách ly</div>
-    </a>
+<div class="splide">
+  <div class="splide__track">
+    <ul id="n_" class="splide__list">
+
+
+    </ul>
   </div>
-
-  <div class="mySlides fade">
-    <a href="https://dantri.com.vn/suc-khoe/covid19-hom-nay-tiem-mot-trieu-lieu-vaccine-42-tinh-thanh-co-ca-mac-moi-20211014183124719.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Cover&dt_medium=1">
-      <img src="https://icdn.dantri.com.vn/zoom/528_352/2021/10/14/tphcm-chien-luoc-dap-dich-covid19-khi-gian-cach-xa-hoi-toan-thanh-pho-4-1634210954634.jpeg" style="width:100%">
-      <div class="text">Covid-19 hôm nay: Tiêm một triệu liều vaccine, 42 tỉnh thành có ca mắc mới</div>
-    </a>
+  
+  <!-- Add the progress bar element -->
+  <div class="my-slider-progress">
+    <div class="my-slider-progress-bar"></div>
   </div>
-
-  <div class="mySlides fade">
-    <a href="https://dantri.com.vn/the-gioi/so-ca-nhiem-va-tu-vong-vi-covid19-toan-cau-giam-manh-20211014143931582.htm#dt_source=Cate_DaiDichCovid19&dt_campaign=Top3&dt_medium=3">
-      <img src="https://icdn.dantri.com.vn/2021/10/14/tiem-chung-vaccine-covid19china-daily-1634197061041.jpeg" style="width:100%">
-      <div class="text">Theo Tổ chức Y tế Thế giới (WHO), số ca nhiễm và tử vong do Covid-19 toàn cầu tiếp tục xu hướng giảm trong bối cảnh các nước thúc đẩy chương trình tiêm chủng vaccine.</div>
-    </a>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-    </section>
+        </div>
+  </section>
 
 
-    <section class="footer_section">
-      
-    </section>
 
 
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./index.js"></script>
+    <script src="./asset/splide.min.js"></script>
+    
+
+    <script>
+      window.addEventListener('scroll', function () {
+          let header = document.querySelector('nav');
+          let windowPosition = window.scrollY > 0;
+          header.classList.toggle('scrolling-active', windowPosition);
+      })
+  </script>
   </body>
   </head>
 </html>
