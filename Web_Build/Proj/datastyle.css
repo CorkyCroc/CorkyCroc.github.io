@@ -77,3 +77,51 @@ a {
 .scrolling-active .nav-link::after{
   background-color: #313131;
 }
+
+
+.title {
+  width: 80%;
+  margin: 30px auto;
+}
+.title h2 {
+  text-align: center;
+}
+.title h2:after {
+  content: "";
+  width: 225px;
+  height: 2px;
+  background: #6c5ce7;
+  display: block;
+  margin: 5px auto;
+}
+.title p {
+  padding: 5px 100px;
+  text-align: center;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+}
+.search .submit{
+
+}
+
+
+.show_data_container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show_data_container .card {
+  background-color: #f5f6fa;
+  opacity: 0.8;
+  width: 15%;
+  height: auto;
+  padding: 15px;
+  margin: 20px 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
