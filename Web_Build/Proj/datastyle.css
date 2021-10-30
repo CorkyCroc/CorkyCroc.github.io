@@ -103,9 +103,7 @@ a {
   display: flex;
   justify-content: center;
 }
-.search .submit{
 
-}
 
 
 .show_data_container {
@@ -124,4 +122,8 @@ a {
   margin: 20px 35px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.show_data_container .card p{
+  padding-top: 7px;
 }
