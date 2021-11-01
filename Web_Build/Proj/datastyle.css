@@ -109,13 +109,14 @@ a {
   width: 85%;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .show_data_container .card {
   background-color: #f5f6fa;
   opacity: 0.8;
-  width: 15%;
+  width: 20%;
   height: auto;
   padding: 15px;
   margin: 20px 35px;

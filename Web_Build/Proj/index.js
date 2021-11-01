@@ -63,10 +63,19 @@ async function getNews() {
   let dataNew = data.data.data;
 
   let dataMixed = mixData(dataNew.topTrueNews);
-
+  console.log(dataMixed);
   renderNews(dataMixed);
 }
 getNews();
 
-var scroll = new SmoothScroll('a[href*="#"]'); //scroll smooth hơn
+function mixData(data){
+  let result = []
+  for( let i = 0; i < 5; i++){
+    let randomIndex = getRandomInt(0,data.length)
+    result.push(data[randomIndex])
+  }
 
+  return result
+}
+
+var scroll = new SmoothScroll('a[href*="#"]'); //scroll smooth hơn
