@@ -5,7 +5,7 @@ const numb = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-async function getData() {
+async function getData(country) {
   let drawdata = await fetch(`https://static.pipezero.com/covid/data.json`);
   let data = await drawdata.json();
   console.log(data);
@@ -63,12 +63,13 @@ async function getNews() {
   let dataNew = data.data.data;
 
   let dataMixed = mixData(dataNew.topTrueNews);
+  console.log(dataNew);
+
+  console.log(dataMixed);
 
   renderNews(dataMixed);
 }
 getNews();
-
-var scroll = new SmoothScroll('a[href*="#"]'); //scroll smooth hơn
 
 function mixData(data) {
   let result = [];
@@ -98,9 +99,9 @@ function renderNews(data) {
       <div class="news_content">
         <p>${data[i].publishedDate}</p>
         <h3>${data[i].title}</h3>
-        <p class="mb-5">${data[i].content}</p>
+        <p>${data[i].content}</p>
         <a href="${data[i].url}" class="cta">
-          <span>Read More</span>
+          <span>Learn More</span>
           <svg width="13px" height="10px" viewBox="0 0 13 10">
             <path d="M1,5 L11,5"></path>
             <polyline points="8 1 12 5 8 9"></polyline>
@@ -124,22 +125,12 @@ function renderNews(data) {
 
   splide.mount();
 }
-
-
-let renderFullData = (data)=>{
-  let dom = document.querySelector(".show_data_container")
-  dom.innerHTML = ""
-
-  for(let i=0; i< data.length; i++){
-    let html = `<div class="card">
-    <h2>Hồ Chí Minh</h2>
-    <p><i class="fas fa-skull-cow"></i> Death: 16552</p>
-    <p><i class="fas fa-skull-cow"></i> Death: 16552</p>
-    <p><i class="fas fa-skull-cow"></i> Death: 16552</p>
-    <p><i class="fas fa-skull-cow"></i> Death: 16552</p>
-    <p><i class="fas fa-skull-cow"></i> Death: 16552</p>
-    <button>Detail</button>
-  </div>`
-  dom.innerHTML+=html
-  }
-}
+// axios.post('https://corona-api.kompa.ai/graphql', {
+//   "operationName":"topTrueNews","variables":{},"query":"query topTrueNews {\n  topTrueNews {\n    id\n    type\n    title\n    content\n    url\n    siteName\n    publishedDate\n    author\n    picture\n    __typename\n  }\n}\n"
+// })
+// .then(function (response) {
+//   console.log(response);
+// })
+// .catch(function (error) {
+//   console.log(error);
+// });
