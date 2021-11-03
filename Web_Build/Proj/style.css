@@ -634,3 +634,7 @@ a {
   text-align: center;
   color: #777;
 }
+
+a {
+  text-decoration: none important;
+}

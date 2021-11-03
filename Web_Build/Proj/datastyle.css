@@ -106,16 +106,14 @@ a {
   display:flex;
   justify-content: center;
   margin-bottom: 50px;
-  outline: none;
 }
 
 .s006 form {
   width: 100%;
   max-width: 300px;
 }
-
-.s006 form:focus {
-  outline: none
+form, fieldset {
+  border: none;
 }
 
 .s006 form .inner-form .input-field {
