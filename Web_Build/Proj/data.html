@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,17 +8,6 @@
     <link rel="stylesheet" href="./hover1.css">
     <link rel="stylesheet" href="./dropdown.css">
     <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
-        <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Covid-19 Update</title>
     <link
     rel="stylesheet"
@@ -45,47 +33,32 @@
       <div class="title">
         <h2>COVID-19 STATIC</h2>
         <p>We update the static daily</p>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./datastyle.css">
-    <link rel="stylesheet" href="./hover1.css">
-    <title>Document</title>
-</head>
-<body>
-  <section class="header">
-    <nav class="menu menu-3">
-      <div class="logo">
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
->>>>>>> 21b207f37c1de94400e7a9326f59d0531d620cdb
       </div>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./data.html">Information</a></li>
-        <li><a href="./aboutme.html">About me</a></li>
-      </ul>
-    </nav>
-  </section>
 
-<<<<<<< HEAD
-      <div class="search">
-        <form id="input">
-          <label  >Enter city: <br>
-               <input name="cityName" type="text" placeholder="City">
-          </label>
-          <br>
-          <button class="submit" type="submit">Search</button>
-      </form>
+      <div class="s006">
+        <form>
+          <fieldset>
+            <div class="inner-form">
+              <div class="input-field">
+                <button class="btn-search" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                  </svg>
+                </button>
+                <input id="search" type="text" placeholder="" value="City" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
+
 
       <div class="show_data_container">
+
       </div>
 
 
       </section>
-
 
       <footer class="footer-59391">
       
@@ -137,20 +110,20 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./showData.js"></script>
+    <script src="./asset/splide.min.js"></script>
+    
 
-
-  </section>
-  
-
-=======
-  
-
-
-  </section>
-  
-
->>>>>>> 21b207f37c1de94400e7a9326f59d0531d620cdb
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-      <script src="./index.js"></script>
-</body>
+    <script>
+      window.addEventListener('scroll', function () {
+          let header = document.querySelector('nav');
+          let windowPosition = window.scrollY > 0;
+          header.classList.toggle('scrolling-active', windowPosition);
+      })
+  </script>
+  </body>
+  </head>
 </html>
