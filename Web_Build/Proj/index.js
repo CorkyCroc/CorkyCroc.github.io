@@ -97,9 +97,9 @@ function renderNews(data) {
       <img src="${data[i].picture}" alt="">
 
       <div class="news_content">
-        <p>${data[i].publishedDate}</p>
+      <p>${data[i].publishedDate}</p>
         <h3>${data[i].title}</h3>
-        <p>${data[i].content}</p>
+        <p style="margin-bottom:40px">${data[i].content}</p>
         <a href="${data[i].url}" class="cta">
           <span>Learn More</span>
           <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -124,13 +124,46 @@ function renderNews(data) {
 
   splide.mount();
 }
-// axios.post('https://corona-api.kompa.ai/graphql', {
-//   "operationName":"topTrueNews","variables":{},"query":"query topTrueNews {\n  topTrueNews {\n    id\n    type\n    title\n    content\n    url\n    siteName\n    publishedDate\n    author\n    picture\n    __typename\n  }\n}\n"
-// })
-// .then(function (response) {
-//   console.log(response);
-// })
-// .catch(function (error) {
-//   console.log(error);
-// });
-var scroll = new SmoothScroll('a[href*="#"]'); //scroll smooth hơn
+
+var scroll = new SmoothScroll('a[href*="#news"]'); //scroll smooth hơn
+
+// let convertTime = (t) => {
+//   let date = new Date(t)
+//   const days = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//   ];
+//   let h = date.getHours();
+//   let m = date.getMinutes();
+//   let s = date.getSeconds();
+//   let d = days[date.getUTCDay()];
+
+//   let h_ = "";
+//   let m_ = "";
+//   let s_ = "";
+
+//   if (h < 10) {
+//     h_ = "0" + h;
+//   } else {
+//     h_ = h;
+//   }
+//   if (m < 10) {
+//     m_ = "0" + m;
+//   } else {
+//     m_ = m;
+//   }
+//   if (s < 10) {
+//     s_ = "0" + s;
+//   } else {
+//     s_ = s;
+//   }
+
+//   let time = h_ + ":" + m_ + ":" + s_ + " " + d;
+
+//   return time;
+// };

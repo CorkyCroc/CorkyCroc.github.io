@@ -39,9 +39,9 @@ let renderFullData = (data) => {
   for (let i = 0; i < data.length; i++) {
     let html = `<div class="card">
       <h2>${data[i].name}</h2>
-      <p>Total Cases: ${numb(data[i].cases)}</p>
+      <p><i class="fas fa-disease"></i>Total Cases: ${numb(data[i].cases)}</p>
       <p><i class="fas fa-ambulance"></i>Cases Today: ${data[i].casesToday}</p>
-      <p><i class="fas fa-skull"></i>Death: ${data[i].death}</p>
+      <p><i class="fas fa-skull"></i>Death: ${numb(data[i].death)}</p>
       <p><i class="fad fa-procedures"></i>Treating: ${data[i].treating}</p>
       <p><i class="fad fa-syringe"></i>Recovered: ${data[i].recovered}</p>
     </div>`;

@@ -30,7 +30,7 @@ body {
   z-index: 999;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 20px;
   font-weight: 500;
 }

@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Be Vietnam Pro", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/a4b33886128681.5d909dad47ded.jpg");
@@ -272,7 +273,8 @@ a {
 }
 
 .data-section .Stat_wrapper {
-  width: 80%;
+  width: 100%;
+  height: 200px;
   margin: auto;
 }
 
@@ -636,5 +638,5 @@ a {
 }
 
 a {
-  text-decoration: none important;
+  text-decoration: none !important;
 }
