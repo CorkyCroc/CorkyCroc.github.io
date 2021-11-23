@@ -1,74 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./hover1.css">
+    <link rel="stylesheet" href="./hover1.css" />
     <title>Document</title>
     <style>
-        .container_ {
-            width: 1000px;
-            margin: 0 auto;
-        }
+      .container_ {
+        width: 100%;
+
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      .container_ nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 60%;
+  align-items: center;
+      }
+      .container_ nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding-left: 200px;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+  position: fixed;
+  z-index: 999;
+  transition: height 0.5s ease;
+}
+      
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container_">
         <nav class="menu menu-3">
             <div class="logo">
-              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_CXxysN.json"  background="transparent"  speed="1"  style="width: 100%; height: 100px;"  loop  autoplay></lottie-player>
             </div>
             <ul>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./data.html">Information</a></li>
               <li><a href="./aboutme.html">About me</a></li>
+              <li><a href="./chart.html">Chart</a></li>
             </ul>
           </nav>
-        <canvas id="myChart"></canvas>
+      <canvas id="myChart"></canvas>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
-
-
     <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: 'Số ca mắc',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
+      const ctx = document.getElementById("myChart").getContext("2d");
+
+      let getData = async () => {
+          let drawData = await fetch("https://static.pipezero.com/covid/data.json")
+
+          let data = await drawData.json();
+          let overview = data.overview;
+
+          let title = overview.map((e) => {
+              return e.date;
+          });
+          let death = overview.map((e) => {
+              return e.death;
+          });
+          let treatings = overview.map((e) => {
+              return e.treating;
+          });
+          let recovered = overview.map((e) => {
+              return e.recovered;
+          });
+
+
+
+
+          console.log(title);
+
+          const myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: title,
+          datasets: [
+            {
+              label: "Death",
+              data: death,
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderWidth: 1,
+            },            
+            {
+                  label: "In treatment",
+              data: treatings,
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderWidth: 1,
             },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        </script>
-</body>
+            {
+              label: "Recovered",
+              data: recovered,
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(130, 88, 159,0.2)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: "COVID-19 Chart",
+              padding: {
+                top: 100,
+                bottom: 30,
+              },
+            },
+            subtitle: {
+              display: true,
+              text: "Static for the last 7 days",
+            //   font: {weight: 'bold'}
+            },
+          },
+          element: {
+            line: {
+              tension: 1,
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      }
+
+      getData();
+
+      
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+    
+        <script>
+          window.addEventListener('scroll', function () {
+              let header = document.querySelector('nav');
+              let windowPosition = window.scrollY > 0;
+              header.classList.toggle('scrolling-active', windowPosition);
+          })
+      </script>
+  </body>
 </html>
