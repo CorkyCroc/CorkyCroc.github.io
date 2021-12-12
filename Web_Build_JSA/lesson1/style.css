@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.s1 {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(./img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.s1 nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.s1 nav img {
+  height: 100px;
+}
+
+.s1 nav ul {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+.s1 nav ul a {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.s1 .content {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+.s1 .content p {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+.s1 .content a {
+  border: 2px solid coral;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-weight: 400;
+}
+
+.s1 .content a:nth-child(2) {
+  color: #fff;
+  background-color: coral;
+  margin-right: 20px;
+}
+.s1 .content a:nth-child(3) {
+  color: coral;
+  transition: 1s;
+}
+.s1 .content a:nth-child(3):hover {
+  background-color: coral;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.s2 {
+  width: 100%;
+  color: #555555;
+  font-weight: 100;
+}
+.title {
+  margin-top: 30px;
+}
+.title h2 {
+  text-transform: uppercase;
+  font-size: 33px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.title h2:after {
+  content: "";
+  display: block;
+  margin: 25px auto;
+  width: 180px;
+  height: 2px;
+  background-color: coral;
+}
+
+.s2 .subtitle p {
+  text-align: center;
+  font-size: 21px;
+}
+
+.s2 .content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 50px auto;
+}
+.s2 .content .card {
+  width: 19%;
+  padding: 5px 10px;
+}
+.s2 .content .card i {
+  color: coral;
+  font-size: 50px;
+}
+.s2 .content .card > * {
+  margin: 5px 0px;
+  letter-spacing: 2px;
+}
+.s2 .content .card p:nth-child(2) {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.s3 {
+  width: 100%;
+}
+
+.s3 ul {
+  list-style: none;
+  cursor: pointer;
+}
+.s3 ul li {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  background-color: black;
+}
+.s3 ul li img {
+  width: 100%;
+  opacity: 0.8;
+  transform: scale(1.25);
+  transition: 1.5s;
+}
+.s3 ul li img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.s4 {
+  background-color: whitesmoke;
+}
+
+.s4 .left,
+.s4 .right {
+  width: 50%;
+  padding: 20px 35px;
+}
+
+.s4 .content {
+  display: flex;
+}
+
+.s4 .content .right .des:nth-child(1) {
+  margin-top: 50px;
+}
+
+.s4 .content .right .des:nth-child(3) {
+  margin-bottom: 75px;
+}
+
+.s4 .right img {
+  height: 50px;
+}
+
+.s4 .left img {
+  width: 35%;
+  float: right;
+}
+
+.s4 .des {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.s4 .des .num {
+  width: 50px;
+  height: 50px;
+  border: 2px solid coral;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: coral;
+}
+
+.s4 .des p {
+  font-size: 18px;
+  color: #555555;
+  font-weight: 100;
+  margin-left: 25px;
+}
+
+.s5 .content {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.s5 .card {
+  width: 23%;
+  padding: 5px;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.s5 .card > * {
+  margin: 8px 0;
+}
+
+.s5 .card p:nth-child(2) {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.s5 .card i {
+  color: coral;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.s5 .card a {
+  text-decoration: underline;
+  color: coral;
+}
+
+.s5 .card i:hover {
+  color: #1da1f2;
+}
+
+.s5 .card img {
+  width: 100%;
+}
+
+.s6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./img/back-customers.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.s6 h2 {
+  color: #fff;
+}
+
+.s6 .title {
+  padding-top: 30px;
+}
+
+.s6 .content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 300px;
+}
+
+.s6 .card {
+  width: 20%;
+}
+
+.s6 .card p {
+  position: relative;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.s6 .card p::before {
+  content: "\201C";
+  font-size: 500%;
+  position: absolute;
+  top: -40px;
+  left: -10px;
+}
+
+.s6 .card img {
+  width: 40;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.s6 .author {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.s7 {
+  background-color: whitesmoke;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.s7 .content {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 300;
+  color: #555555;
+}
+
+.s7 .card {
+  background-color: white;
+  width: 18%;
+  padding: 15px;
+}
+
+.s7 .card ul {
+  list-style: none;
+}
+
+.s7 .card .class {
+  font-size: 30px;
+}
+
+.s7 .card .price p:nth-child(1) {
+  color: coral;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.s7 .card .price p:nth-child(2) {
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #555555;
+}
+
+.s7 .card:nth-child(3) .price p:nth-child(1) {
+    margin-bottom: 23px;
+}
+
+.s7 .card .access ul li {
+  margin-top: 30px;
+}
+
+.s7 .card .access {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #555555;
+}
+
+.s7 .card .access i{
+    padding-right: 10px;
+}
+
+.s7 .button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.s7 .button a {
+  border: 2px solid coral;
+  padding: 13px 30px;
+  border-radius: 30px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.s7 .card .button a{
+    color: coral;
+    transition:0.5s;
+}
+
+.s7 .card .button a:hover{
+    background-color: coral;
+    color: #fff;
+    transition: 1s;
+}
+
+.s7 .card .button #orange {
+    background-color: coral;
+    color: #fff;
+}
+
+
+.s8 .form{
+    width: 50%;
+    background-color: whitesmoke;
+}
+
+.s8 .form .container{
+    resize: vertical;
+}
+
+.s8 .footer {
+  background-color: #333;
+}
+.s8 .footer .bottom {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 100;
+  padding: 15px 0;
+  font-size: 13px;
+}
+.s8 .footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-weight: 100;
+  font-size: 13px;
+  color: whitesmoke;
+  padding: 50px 150px;
+}
+
+.s8 .footer .top .menu_ ul {
+  display: flex;
+  list-style: none;
+  width: 350px;
+  justify-content: space-between;
+  color: whitesmoke !important;
+}
+.s8 .footer .top .menu_ ul li a {
+  color: whitesmoke !important;
+}
+.s8 .network {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke !important;
+}
+.s8 .network a {
+  color: whitesmoke !important;
+  transition: 1s;
+}
+.s8 .network a:hover {
+  color: coral;
+  transition: 1s;
+}
