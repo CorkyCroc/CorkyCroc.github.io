@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#background{
+    background-color: cornflowerblue;
+}
+
+
+
+
+
+
+
+/* body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00223E, #FFA17F);
+}
+#dong_ho h2{
+    position: relative;
+    display:block;
+    color:#fff;
+    text-align: center;
+    margin:10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+#dong_ho #thoi_gian{
+    display:flex;
+}
+#dong_ho #thoi_gian div{
+    position: relative;
+    margin: 0 5px;
+} */
