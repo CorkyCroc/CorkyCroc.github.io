@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../mk-c4k-jsb06"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CorkyCroc.github.io"
+	}
+}
