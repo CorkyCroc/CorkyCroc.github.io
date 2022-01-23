@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherforecaster</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./hover1.css">
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Weathercaster</title>
 </head>
 <body>
-    
+    <section class="header">
+        <nav class="menu menu-3">
+            <div class="logo">
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_dw8rzsix.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+            </div>
+            <ul>
+              <li><a href="./home.html">Home</a></li>
+              <li><a href="./home.html">Home</a></li>
+            </ul>
+          </nav>
+
+          <div class="intro">
+              <div class="left">
+                  <p>Weathercaster</p>
+                  <p>Feel the nature</p>
+                  <p>Beware of mothernature</p>
+              </div>
+              <a href="#" class="cta">
+                <span>Find your city</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
+              <div class="right">
+                  <img src="./img/sun.png" alt="">
+              </div>
+          </div>
+    </section>
+
+
+
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('nav');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+    </script>
 </body>
 </html>

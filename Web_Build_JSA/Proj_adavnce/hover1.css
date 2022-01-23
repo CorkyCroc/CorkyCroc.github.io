@@ -1,0 +1,126 @@
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.menu li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.menu a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+  padding: 4px 0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);;
+}
+.menu a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.5s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0 50%;
+}
+.menu a:hover::before {
+  transform: scale3d(1, 1, 1);
+}
+.menu-1 a::before {
+  background: #a29bfe;
+  transform-origin: 100% 50%;
+}
+.menu-1 a:hover::before {
+  transform-origin: 0 50%;
+}
+.menu-2 a::before {
+  background: #ec407a;
+}
+.menu-3 a::before {
+  transform-origin: 50% 50%;
+  background: #a29bfe;
+}
+.menu-4 a::before {
+  transform-origin: 100% 50%;
+  background: #ec407a;
+}
+.menu-5 a::before {
+  background: #e91e63;
+  transform-origin: 0 50%;
+}
+.menu-5 a:hover::before {
+  transform-origin: 100% 50%;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eceff1;
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+.nav li.nav_item {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  text-align: center;
+}
+.nav li.nav_item a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 200;
+  display: block;
+  text-transform: uppercase;
+  color: #78909c;
+  transition: all 0.2s;
+}
+.nav li.nav_item a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f48fb1;
+  animation: slide-out 300ms ease-in-out forwards;
+}
+.nav li.nav_item a:hover {
+  background: #fbfbfc;
+  color: #546e7a;
+}
+.nav li.nav_item a:hover:after {
+  animation: slide-in 300ms;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
