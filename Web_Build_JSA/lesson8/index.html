@@ -4,24 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Dự Báo Thời Tiết</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 350px;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        text-align: center;
+      }
+      #temp {
+        color: #ffcc70;
+        font-size: 50px;
+        font-weight: bold;
+      }
+      input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+      }
+      button {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      form {
+        margin: 25px 0;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <p>Hanoi</p>
-      <div class="card">
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <p>25℃</p>
-        <p>Cloudy</p>
-        <form id="input">
-          <label>Enter city:
-            <input name="cityName" type="text" placeholder="City" />
-          </label>
-
-          <button type="submit">submit</button>
-        </form>
+      <h2>Dự Báo Thời Tiết</h2>
+      <div class="info">
       </div>
+        <hr />
+        <form id="form-input">
+          <input name="city" type="text" placeholder="Nhập thành phố" />
+          <button type="submit">Submit</button>
+        </form>
     </div>
 
     <script src="./main.js"></script>

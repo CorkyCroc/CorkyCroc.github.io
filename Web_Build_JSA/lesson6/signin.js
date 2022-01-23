@@ -30,7 +30,7 @@ formSignIn.onsubmit = (e) => {
       let success = false;
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == email && users[i].password == password) {
-          open("home.html", "_self");
+          open("../lesson8/index.html", "_self");
           success = true;
           break;
         }
