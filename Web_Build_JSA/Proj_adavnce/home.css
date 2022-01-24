@@ -11,6 +11,13 @@ body {
   background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Weather-Background.jpg");
   background-size: cover;
   background-attachment: fixed;
+  height: 5000px;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.25);
 }
 
 .header nav {
@@ -18,7 +25,6 @@ body {
   height: 100px;
   display: flex;
   padding-left: 200px;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
   position: fixed;
   z-index: 999;
   transition: height 0.5s ease;
@@ -35,13 +41,13 @@ a {
 .header nav ul {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 60%;
   align-items: center;
 }
 
 .scrolling-active {
-  background-color: #2e86de;
+  background-color: transparent;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
   height: 80px !important;
   transition: height 0.5s ease;
@@ -49,7 +55,7 @@ a {
 
 .scrolling-active ul li a {
   font-size: 20px !important;
-  color: #2d3436;
+  color: #b2bec3;
   transition: 1s;
 }
 
@@ -134,13 +140,18 @@ a {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cta {
-  position: absolute;
+  position: relative;
   margin: auto;
   padding: 13px 26px;
   transition: all 0.2s ease;
-  top: 65%;
-  right: 80%;
+  top: 20%;
+  right: 36%;
 }
 .cta:before {
   content: "";
@@ -150,7 +161,7 @@ a {
   display: block;
   border-radius: 28px;
   background: rgba(255, 171, 157, 0.5);
-  width: 60px;
+  width: 56px;
   height: 56px;
   transition: all 0.3s ease;
 }
@@ -185,4 +196,115 @@ a {
 }
 .cta:active {
   transform: scale(0.96);
+}
+/* header */
+
+.title {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.title p:last-child {
+  text-align: center;
+  font-size: 15px;
+}
+
+.title p:first-child {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+.title p:first-child:after {
+  content: "";
+  width: 400px;
+  height: 2px;
+  background: #00a8ff;
+  border-radius: 5px;
+  display: block;
+  margin: 5px auto;
+}
+
+.s006 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.s006 form {
+  width: 100%;
+  max-width: 300px;
+}
+form,
+fieldset {
+  border: none;
+}
+
+.s006 form .inner-form .input-field {
+  height: 65px;
+  width: 100%;
+  position: relative;
+  outline: none;
+}
+
+.s006 form .inner-form .input-field input {
+  height: 70%;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  font-size: 18px;
+  color: #666;
+  border-radius: 34px;
+}
+
+.s006 form .inner-form .input-field .btn-search {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 13%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .s006 form .inner-form .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .s006 form .inner-form .input-field input {
+    padding-left: 55px;
+    font-size: 16px;
+  }
+  .s006 form .inner-form .input-field .btn-search svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.showData .info_searcher{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+}
+
+.showData .stat_wrapper{
+    background-color: #f5f6fa;
+    opacity: 0.8;
+    width: 20%;
+    height: auto;
+    padding: 15px;
+    margin: 20px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
