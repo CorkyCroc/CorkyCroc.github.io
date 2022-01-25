@@ -41,7 +41,7 @@
   transform-origin: 0 50%;
 }
 .menu-2 a::before {
-  background: #ec407a;
+  background: #3498db;
 }
 .menu-3 a::before {
   transform-origin: 50% 50%;
