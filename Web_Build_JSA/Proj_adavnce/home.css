@@ -312,7 +312,7 @@ fieldset {
   background-color: #f5f6fa;
   opacity: 0.8;
   width: 80%;
-  height: 30vh;
+  height: 40vh;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -326,7 +326,7 @@ fieldset {
 
 .stat_wrapper .today {
   width: 40%;
-  height: 80%;
+  height: 85%;
   background-color: red;
 }
 
@@ -350,6 +350,4 @@ fieldset {
   font-weight: 500;
 }
 
-.stat_wrapper .today p {
-  display: inline-block;
-}
+
