@@ -90,29 +90,136 @@
           </fieldset>
         </form>
       </div>
+
       <div class="info_search">
         <div class="stat_wrapper">
-            <h1>Hanoi</h1>
-          <div class="today">
+          <h1>Hanoi</h1>
+          <div class="weatherinfo">
+            <div class="today">
               <h3>Today</h3>
-            <img
-              src="//cdn.weatherapi.com/weather/64x64/night/116.png"
-              alt=""
-            />
-            <!-- deg -->
-            <h4>26℃</h4>
-            <!-- rf -->
-            <span><i class="fas fa-temperature-low" style="user-select: auto;"></i>27.8℃</span>
-            <!-- des -->
-            <span>Partly cloudy</span>
-            <!-- rain chance -->
-            <span>Rain chance: 99%</span> <br>
-            <!-- Wind -->
-            <span>Wind speed: SE15.1km/h</span>
-            <!-- humidity -->
-            <span>Humidity: 65%</span>
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                alt=""
+              />
+              <h4>26℃</h4>
+              <h5>Partly cloudy</h5>
+              <div class="sub">
+                <div class="realfeel">
+                  <span
+                    ><i
+                      class="fas fa-temperature-low"
+                      style="user-select: auto"
+                    ></i
+                    >Realfeel: 27.8℃</span
+                  >
+                </div>
+                <div class="rain">
+                  <span
+                    ><i class="far fa-umbrella" style="user-select: auto"></i
+                    >Rain chance: 99%</span
+                  >
+                </div>
+                <div class="wind">
+                  <span
+                    ><i class="far fa-wind" style="user-select: auto"></i>Wind
+                    speed: SE15.1km/h</span
+                  >
+                </div>
+                <div class="humidity">
+                  <span
+                    ><i class="far fa-humidity" style="user-select: auto"></i
+                    >Humidity: 65%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="forecast1">
+              <h3>03/02/2021</h3>
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                alt=""
+              />
+              <h4>26℃</h4>
+              <h5>Overcast</h5>
+              <div class="sub">
+                <div class="maxtemp">
+                  <span
+                    ><i
+                      class="far fa-thermometer-three-quarters"
+                      style="user-select: auto"
+                    ></i
+                    >Max:3m0℃</span
+                  >
+                </div>
+                <div class="mintemp">
+                  <span
+                    ><i
+                      class="far fa-thermometer-quarter"
+                      style="user-select: auto"
+                    ></i
+                    >Min:10℃</span
+                  >
+                </div>
+                <div class="rain">
+                  <span
+                    ><i class="far fa-umbrella" style="user-select: auto"></i
+                    >Rain chance: 99%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="forecast2">
+              <h3>04/02/2021</h3>
+              <img
+                src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                alt=""
+              />
+              <h4>26℃</h4>
+              <h5>Overcast</h5>
+              <div class="sub">
+                <div class="maxtemp">
+                  <span
+                    ><i
+                      class="far fa-thermometer-three-quarters"
+                      style="user-select: auto"
+                    ></i
+                    >Max:30℃</span
+                  >
+                </div>
+                <div class="mintemp">
+                  <span
+                    ><i
+                      class="far fa-thermometer-quarter"
+                      style="user-select: auto"
+                    ></i
+                    >Min:10℃</span
+                  >
+                </div>
+                <div class="rain">
+                  <span
+                    ><i class="far fa-umbrella" style="user-select: auto"></i
+                    >Rain chance: 99%</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="embed">
+      <div class="title">
+        <p>Wind graph</p>
+        <p>From Windy.com</p>
+      </div>
+      <div class="graph">
+        <iframe
+          width="1000"
+          height="550"
+          src="https://embed.windy.com/embed2.html?lat=10.833&lon=106.658&detailLat=10.833&detailLon=106.658&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+          frameborder="0"
+        ></iframe>
       </div>
     </section>
 
