@@ -27,7 +27,7 @@ let getCity = async (city) => {
         src="${data.current.condition.icon}"></
         alt=""
       />
-      <h4>${data.current.temp_c + "℃"}</h4>
+      <h4>${Math.round(data.current.temp_c) + "℃"}</h4>
       <h5>${data.current.condition.text}</h5>
       <div class="sub">
         <div class="realfeel">
@@ -36,7 +36,7 @@ let getCity = async (city) => {
               class="fas fa-temperature-low"
               style="user-select: auto"
             ></i
-            >Realfeel: ${data.current.feelslike_c + "℃"}</span
+            >Realfeel: ${Math.round(data.current.feelslike_c) + "℃"}</span
           >
         </div>
         <div class="rain">
@@ -67,7 +67,7 @@ let getCity = async (city) => {
       src="${data.forecast.forecastday[1].day.condition.icon}"
       alt=""
     />
-      <h4>${data.forecast.forecastday[1].day.avgtemp_c + "℃"}</h4>
+      <h4>${Math.round(data.forecast.forecastday[1].day.avgtemp_c) + "℃"}</h4>
       <h5>${data.forecast.forecastday[1].day.condition.text}</h5>
       <div class="sub">
         <div class="maxtemp">
@@ -76,7 +76,7 @@ let getCity = async (city) => {
               class="far fa-thermometer-three-quarters"
               style="user-select: auto"
             ></i
-            >Max:${data.forecast.forecastday[1].day.maxtemp_c + "℃"}</span
+            >Max:${Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "℃"}</span
           >
         </div>
         <div class="mintemp">
@@ -85,7 +85,7 @@ let getCity = async (city) => {
               class="far fa-thermometer-quarter"
               style="user-select: auto"
             ></i
-            >Min:${data.forecast.forecastday[1].day.mintemp_c + "℃"}℃</span
+            >Min:${Math.round(data.forecast.forecastday[1].day.mintemp_c) + "℃"}℃</span
           >
         </div>
         <div class="rain">
@@ -104,7 +104,7 @@ let getCity = async (city) => {
         src="${data.forecast.forecastday[2].day.condition.icon}"
         alt=""
       />
-      <h4>${data.forecast.forecastday[2].day.avgtemp_c + "℃"}</h4>
+      <h4>${Math.round(data.forecast.forecastday[2].day.avgtemp_c) + "℃"}</h4>
       <h5>${data.forecast.forecastday[2].day.condition.text}</h5>
       <div class="sub">
         <div class="maxtemp">
@@ -113,7 +113,7 @@ let getCity = async (city) => {
               class="far fa-thermometer-three-quarters"
               style="user-select: auto"
             ></i
-            >Max:${data.forecast.forecastday[2].day.maxtemp_c + "℃"}</span
+            >Max:${Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "℃"}</span
           >
         </div>
         <div class="mintemp">
@@ -122,7 +122,7 @@ let getCity = async (city) => {
               class="far fa-thermometer-quarter"
               style="user-select: auto"
             ></i
-            >Min:${data.forecast.forecastday[2].day.mintemp_c + "℃"}</span
+            >Min:${Math.round(data.forecast.forecastday[2].day.mintemp_c) + "℃"}</span
           >
         </div>
         <div class="rain">
