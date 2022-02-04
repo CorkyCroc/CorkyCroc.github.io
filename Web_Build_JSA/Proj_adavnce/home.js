@@ -40,10 +40,9 @@ let getCity = async (city) => {
           >
         </div>
         <div class="rain">
-          <%
-            ><i class="far fa-umbrella" style="user-select: auto"></i
+        <i class="far fa-umbrella" style="user-select: auto"></i
             >Rain chance: ${
-              data.forecast.forecastday[0].day.daily_change_of_rain + "%"
+              data.forecast.forecastday[0].day.daily_chance_of_rain + "%"
             }</span
           >
         </div>
@@ -93,7 +92,7 @@ let getCity = async (city) => {
           <span
             ><i class="far fa-umbrella" style="user-select: auto"></i
             >Rain chance: ${
-              data.forecast.forecastday[1].day.daily_change_of_rain + "%"
+              data.forecast.forecastday[1].day.daily_chance_of_rain + "%"
             }</span
           >
         </div>
@@ -130,7 +129,7 @@ let getCity = async (city) => {
           <span
             ><i class="far fa-umbrella" style="user-select: auto"></i
             >Rain chance: ${
-              data.forecast.forecastday[2].day.daily_change_of_rain + "%"
+              data.forecast.forecastday[2].day.daily_chance_of_rain + "%"
             }</span
           >
         </div>
