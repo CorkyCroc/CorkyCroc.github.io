@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,78 +18,85 @@
     />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <title>Weathercaster</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="header">
-        <nav class="menu menu-2">
-            <div class="logo">
-              <lottie-player
-                src="https://assets8.lottiefiles.com/packages/lf20_dw8rzsix.json"
-                background="transparent"
-                speed="1"
-                style="width: 100px; height: 100px"
-                loop
-                autoplay
-              >
-              </lottie-player>
-              <p>Weathercaster</p>
-            </div>
-            <ul>
-              <li><a href="./home.html">Home</a></li>
-              <li><a href="./forecast.html">10-days forecast</a></li>
-            </ul>
-          </nav>
+      <nav class="menu menu-2">
+        <div class="logo">
+          <lottie-player
+            src="https://assets8.lottiefiles.com/packages/lf20_dw8rzsix.json"
+            background="transparent"
+            speed="1"
+            style="width: 100px; height: 100px"
+            loop
+            autoplay
+          >
+          </lottie-player>
+          <p>Weathercaster</p>
+        </div>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./forecast.html">10-days forecast</a></li>
+        </ul>
+      </nav>
     </section>
-    
+
     <section class="content">
-        <div class="s006">
-            <form id="search_form">
-              <fieldset>
-                <div class="inner-form">
-                  <div class="input-field">
-                    <button class="btn-search" type="submit">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                        ></path>
-                      </svg>
-                    </button>
-                    <input name="city" type="text" placeholder="Enter city" />
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-
-          <div class="title">
-            <p>Hanoi</p>
-          </div>
-
-          <div class="card_wrapper">
-              <div class="card">
-                <p class="des">Overcast</p>
-                  <p class="avg-temp">26℃</p>
-                  <p class="max-temp">Max temperature: 20℃</p>
-                  <p class="mim-temp">Min temperature: 10℃</p>
-                  <p class="rain">Rain chance: 99%</p>
-                  <p class="humid">Humidity: 88%</p>
+      <div class="s006">
+        <form id="search_form">
+          <fieldset>
+            <div class="inner-form">
+              <div class="input-field">
+                <button class="btn-search" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                    ></path>
+                  </svg>
+                </button>
+                <input name="city" type="text" placeholder="Enter city" />
               </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="title">
+        <p>Hanoi</p>
+      </div>
+
+      <div class="info_wrap">
+        <div class="card_wrapper">
+            <div class="card">
+                <p>07/10/2022</p>
+              <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="" />
+              <p class="avg-temp">26℃</p>
+              <p class="des">Overcast</p>
+              <p class="max-temp">Max temperature: 20℃</p>
+              <p class="mim-temp">Min temperature: 10℃</p>
+              <p class="rain">Rain chance: 99%</p>
+              <p class="humid">Humidity: 88%</p>
+            </div>
           </div>
+      </div>
     </section>
 
 
 
+
+
+    <script src="./showData.js"></script>
     <script>
-        window.addEventListener("scroll", function () {
-          let header = document.querySelector("nav");
-          let windowPosition = window.scrollY > 0;
-          header.classList.toggle("scrolling-active", windowPosition);
-        });
-      </script>
-</body>
+      window.addEventListener("scroll", function () {
+        let header = document.querySelector("nav");
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle("scrolling-active", windowPosition);
+      });
+    </script>
+  </body>
 </html>
