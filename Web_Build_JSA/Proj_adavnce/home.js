@@ -13,7 +13,7 @@ form_submit.onsubmit = function (sub) {
 
 let getCity = async (city) => {
   let drawData = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=44ab760595ba41e7a4680133222401&q=${city}&days=3&aqi=yes&alerts=yes`
+    `http://api.weatherapi.com/v1/forecast.json?key=44ab760595ba41e7a4680133222401&q=${city}&days=10&aqi=yes&alerts=no`
   );
 
   let data = await drawData.json();
