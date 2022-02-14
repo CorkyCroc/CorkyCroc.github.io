@@ -21,4 +21,4 @@ let searchCity = async function (city) {
   console.log(data.forecast.forecastday.length);
 
 //   for (let i = 0; i < data.forecast.forecastday.length; i++) {}
-};
+};getData();

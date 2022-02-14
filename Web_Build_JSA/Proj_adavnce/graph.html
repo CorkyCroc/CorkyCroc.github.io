@@ -36,7 +36,7 @@
         </div>
         <ul>
           <li><a href="./home.html">Home</a></li>
-          <li><a href="./forecast.html">10-days forecast</a></li>
+          <li><a href="./graph.html">Graph</a></li>
         </ul>
       </nav>
     </section>
@@ -71,25 +71,14 @@
       </div>
 
       <div class="info_wrap">
-        <div class="card_wrapper">
-            <div class="card">
-                <p>07/10/2022</p>
-              <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="" />
-              <p class="avg-temp">26℃</p>
-              <p class="des">Overcast</p>
-              <p class="max-temp">Max temperature: 20℃</p>
-              <p class="mim-temp">Min temperature: 10℃</p>
-              <p class="rain">Rain chance: 99%</p>
-              <p class="humid">Humidity: 88%</p>
-            </div>
-          </div>
+        <canvas id="myChart" width="150px" height="100px"></canvas>
       </div>
     </section>
 
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="./showData.js"></script>
     <script>
       window.addEventListener("scroll", function () {

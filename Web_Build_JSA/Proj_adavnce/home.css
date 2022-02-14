@@ -187,25 +187,12 @@ body {
 }
 
 .right {
-  animation: MoveUpDown 1s linear infinite;
   position: absolute;
   left: 55%;
-  bottom: -10%;
+  bottom: -5%;
 }
-
-@keyframes MoveUpDown {
-  0%,
-  100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 50px;
-  }
-}
-
 a {
   text-decoration: none;
-  color: inherit;
 }
 /* header */
 
