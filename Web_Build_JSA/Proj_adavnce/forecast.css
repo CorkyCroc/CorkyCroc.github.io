@@ -11,7 +11,7 @@ body {
   background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Weather-Background.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 5000px;
+  /* height: 5000px; */
 }
 
 .header {
@@ -155,9 +155,71 @@ fieldset {
 }
 
 .content .info_wrap{
-    width: 50%;
+    width: 60%;
+    height: 200%;
     transform: translate(-50%, -50%);
     position: relative;
-    top: 8%;
+    top: 400px;
     left:50%;
+    margin-bottom: 70px;
 }
+
+.footer-16371 {
+    padding: 7rem 0;
+    border-top: 1px solid #efefef;
+    background-color: #fff;
+  
+  }
+  .footer-16371 .footer-site-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .footer-16371 .footer-site-logo p {
+    color: #0984e3;
+  }
+  .footer-16371 .page-links {
+    padding: 0;
+    margin: 0;
+  }
+  .footer-16371 .page-links li {
+    display: inline-block;
+  }
+  .footer-16371 .page-links li a {
+    padding: 10px;
+    color: #000;
+    transition: 0.25s;
+  }
+  .footer-16371 .page-links li a:hover {
+    color: #74b9ff;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+  .footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+  }
+  .footer-16371 .social ul li {
+    display: inline-block;
+  }
+  .footer-16371 .social ul li a {
+    display: inline-block;
+    padding: 10px;
+  }
+  .footer-16371 .social ul li.in a {
+    color: #df588a;
+    font-size: 20px;
+  }
+  .footer-16371 .social ul li.gh a {
+    color: #8e44ad;
+    font-size: 20px;
+  }
+  .footer-16371 .social ul li.fb a {
+    color: #3742d0;
+    font-size: 20px;
+  }
+  .footer-16371 .copyright {
+    color: #999999;
+  }
+  
