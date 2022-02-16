@@ -9,6 +9,8 @@ form_submit.onsubmit = function (sub) {
   console.log(key);
 
   form_submit.city.value = "";
+
+  localStorage.setItem('key', key);
 };
 
 let getCity = async (city) => {
@@ -141,3 +143,5 @@ let getCity = async (city) => {
 
   document.querySelector(".info_search").innerHTML = html;
 };
+
+

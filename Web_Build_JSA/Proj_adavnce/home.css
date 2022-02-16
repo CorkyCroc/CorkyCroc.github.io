@@ -140,6 +140,8 @@ body {
   margin: auto;
   padding: 13px 26px;
   transition: all 0.2s ease;
+  text-decoration: none !important;
+  scroll-behavior: smooth;
 }
 .cta:before {
   content: "";
