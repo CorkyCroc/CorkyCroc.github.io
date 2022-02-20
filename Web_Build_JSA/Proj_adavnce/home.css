@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Weather-Background.jpg");
+  background-image: url("./img/Day.png");
   background-size: cover;
   background-attachment: fixed;
   /* height: 5000px; */
@@ -191,9 +191,10 @@ body {
 }
 
 .right {
+  width: 400px;
   position: absolute;
   left: 55%;
-  bottom: -5%;
+  bottom: 1%;
 }
 a {
   text-decoration: none;

@@ -40,7 +40,11 @@
         </div>
         <ul>
           <li><a href="./home.html">Home</a></li>
-          <li><a href="./graph.html">More</a></li>
+          <li><a href="">More</a></li>
+          <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+            <li><a href="./graph.html">Graph</a></li>
+            <li><a href="./astro.html">Astro</a></li>
+          </ul>
         </ul>
       </nav>
 
@@ -128,7 +132,7 @@
             <ul class="list-unstyled page-links mb-5">
               <li><a href="./home.css">Home</a></li>
               <li><a href="./graph.html">Graph</a></li>
-              <li><a href="#">Press</a></li>
+              <li><a href="./astro.html">Astro</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Legal</a></li>
@@ -173,6 +177,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./home.js"></script>
+    <script src="./backgroundchange.js"></script>
     <script>
       window.addEventListener("scroll", function () {
         let header = document.querySelector("nav");

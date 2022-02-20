@@ -122,7 +122,7 @@ let getData = async (city) => {
     },
   });
 
-  let html = `        <p>${city}</p>`
+  let html = `        <p>${data.location.name}</p>`
 
   document.querySelector('.title').innerHTML = html;
 
