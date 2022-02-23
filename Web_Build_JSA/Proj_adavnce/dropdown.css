@@ -2,16 +2,16 @@
 .dropdown {
   list-style: none;
   font-family: "Be Vietnam Pro", sans-serif;
-  font-weight: 700;
-  color: black;
   position: relative;
-  font-size: 18px;
   perspective: 1000px;
   z-index: 100;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #f1f2f6;
+  text-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 .dropdown:hover {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
   cursor: pointer;
 }
 .dropdown:hover .dropdown_menu li {

@@ -122,9 +122,9 @@ let getData = async (city) => {
     },
   });
 
-  let html = `        <p>${data.location.name}</p>`
+  let html = `        <p id='cityName'>${data.location.name}</p>`
 
-  document.querySelector('.title').innerHTML = html;
+  document.querySelector('.cityTitle').innerHTML = html;
 
   document.querySelector('#graphInput').value = city;
 };

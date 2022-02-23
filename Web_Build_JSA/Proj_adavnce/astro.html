@@ -71,6 +71,13 @@
         <p class="simtime">Simulated time: <span id="demo"></span>:00</p>
       </div>
 
+      <div class="clock">
+        <span class="date"></span>
+        <br>
+        <span class="hms"></span>
+        <span class="ampm"></span>
+      </div>
+
       <div id="toggle-label-left">Real-time animation</div>
       <div class="toggle">
         <div class="switch"></div>
@@ -133,6 +140,7 @@
 
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./clock.js"></script>
     <script src="./astro.js"></script>
     <script>
       window.addEventListener("scroll", function () {
