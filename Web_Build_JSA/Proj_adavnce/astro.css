@@ -221,11 +221,6 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-@keyframes blink {
-    0% { height: 15px; top:0; }
-    99% { height: 15px; top:0; }
-    100% { height: 0px; top:7px; }
-}
 /* Slider */
 #slidecontainer {
 	margin-top: 30px;
@@ -312,6 +307,27 @@ body {
 }
 #toggle-label-right {
 	opacity:0.2;
+}
+
+.clock_container{
+	margin-bottom: 20px;
+}
+
+.clock_container .clock {
+	display: inline-block;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 0 15px;
+}
+
+.clock_container .sun_fore{
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.clock_container .moon_fore{
+	display: inline-block;
+	padding: 0 15px;
 }
 
 .footer-16371 {
