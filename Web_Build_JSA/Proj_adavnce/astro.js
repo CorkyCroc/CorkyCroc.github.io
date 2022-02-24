@@ -135,3 +135,6 @@ document.getElementsByClassName("toggle")[0].onclick = function () {
     document.getElementById("toggle-label-right").style.opacity = "0.2";
   }
 };
+
+
+
