@@ -77,24 +77,33 @@ function gettimeofday(now) {
   }
   if (hour >= 0 && hour < 5) {
     document.body.style.backgroundImage = 'url("./img/Night.png")';
-    document.querySelector(".date").style.color = "#fff";
-    document.querySelector(".hms").style.color = "#fff";
-    document.querySelector(".ampm").style.color = "#fff";
+    document.querySelector(".sun_fore").style.color = "#ecf0f1";
+    document.querySelector(".clock").style.color = "#ecf0f1";
+    document.querySelector(".moon_fore").style.color = "#ecf0f1";
   }
   if (hour >= 5 && hour < 7) {
     document.body.style.backgroundImage = 'url("./img/Sunrise.png")';
+    document.querySelector(".sun_fore").style.color = "#222f3e";
+    document.querySelector(".clock").style.color = "#222f3e";
+    document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 7 && hour < 17) {
     document.body.style.backgroundImage = 'url("./img/Day.png")';
+    document.querySelector(".sun_fore").style.color = "#222f3e";
+    document.querySelector(".clock").style.color = "#222f3e";
+    document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 17 && hour < 19) {
     document.body.style.backgroundImage = 'url("./img/Evening.png")';
+    document.querySelector(".sun_fore").style.color = "#222f3e";
+    document.querySelector(".clock").style.color = "#222f3e";
+    document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 19 && hour <= 24) {
     document.body.style.backgroundImage = 'url("./img/Night.png")';
-    document.querySelector(".date").style.color = "#fff";
-    document.querySelector(".hms").style.color = "#fff";
-    document.querySelector(".ampm").style.color = "#fff";
+    document.querySelector(".sun_fore").style.color = "#ecf0f1";
+    document.querySelector(".clock").style.color = "#ecf0f1";
+    document.querySelector(".moon_fore").style.color = "#ecf0f1";
   }
 }
 
