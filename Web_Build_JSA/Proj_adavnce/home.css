@@ -98,9 +98,11 @@ body {
 }
 
 .intro .left {
-  width: 40%;
+  max-width: 40%;
+  min-width: none;
   position: absolute;
   right: 58%;
+  /* background-color: #00a8ff; */
 }
 
 .intro .left p:first-child {
@@ -127,6 +129,7 @@ body {
   animation: textclip 2s linear infinite;
   display: inline-block;
   font-size: 60px;
+  width: 500px;
 }
 
 @keyframes textclip {
@@ -198,14 +201,19 @@ body {
 }
 
 .right {
+  width: 100%;
+  max-width: 660px;
   position: absolute;
-  left: 55%;
+  left: 40%;
   bottom: 1%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  /* background-color: red; */
 }
 
 .right img {
-  width: 570px;
-  max-width: 660px;
+  width: 100%;
 }
 a {
   text-decoration: none;
