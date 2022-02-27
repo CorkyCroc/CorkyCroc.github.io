@@ -25,8 +25,6 @@ function gettimeofday(now) {
     document.body.style.backgroundImage = 'url("./img/Night.png")';
     document.querySelector('.cityTitle').style.color = '#fff';
   }
-  updatetime();
-  var timeloop = setInterval(updatetime, 1000);
 }
 updatetime();
 var timeloop = setInterval(updatetime, 1000);
