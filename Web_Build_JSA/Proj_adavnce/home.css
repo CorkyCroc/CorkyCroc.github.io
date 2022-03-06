@@ -24,7 +24,9 @@ body {
 	width: 100%;
 	height: 100px;
 	display: flex;
-	padding-left: 200px;
+	justify-content: space-between;
+	padding: 0 200px;
+	gap: 10px;
 	position: fixed;
 	z-index: 999;
 	transition: height 0.5s ease;
@@ -88,21 +90,17 @@ body {
 }
 
 .intro {
-	width: 80%;
+	width: 100%;
 	height: 85vh;
-	margin: 0 auto;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	position: relative;
+	padding: 50px 200px;
 }
 
 .intro .left {
 	max-width: 40%;
-	min-width: none;
-	position: absolute;
-	right: 58%;
-	/* background-color: #00a8ff; */
 }
 
 .intro .left p:first-child {
@@ -201,15 +199,12 @@ body {
 }
 
 .right {
-	width: 100%;
+	width: 50%;
 	max-width: 660px;
-	position: absolute;
-	left: 40%;
-	bottom: 1%;
+	position: relative;
 	display: flex;
 	align-items: center;
 	z-index: -1;
-	/* background-color: red; */
 }
 
 .right img {
@@ -313,19 +308,17 @@ fieldset {
 	}
 }
 
-.showData .info_searcher {
-	width: 100%;
-	height: 200px;
+.showData .info_search {
+	padding: 0 200px;
 }
 
 .showData .stat_wrapper {
-	margin: auto;
-	background-color: #f5f6fa;
-	opacity: 0.8;
-	width: 95%;
 	padding: 15px;
 	border-radius: 10px;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background: rgba(245, 246, 250, 0.5);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(8px);
+	box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
 }
 
 .stat_wrapper .weatherinfo {
@@ -336,6 +329,7 @@ fieldset {
 	text-align: center;
 	font-size: 40px;
 	font-weight: 500;
+	margin: 5px 0px 20px;
 }
 
 .weatherinfo .today {
