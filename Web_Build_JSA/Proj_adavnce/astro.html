@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Weathercaster</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathercaster</title>
 
-		<link rel="stylesheet" href="./astro.css" />
-		<link rel="stylesheet" href="./hover1.css" />
-		<link rel="stylesheet" href="./loading.css" />
-		<link rel="stylesheet" href="./dropdown.css" />
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<link
-			href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
-			rel="stylesheet"
-		/>
-		<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-	</head>
+    <link rel="stylesheet" href="./astro.css" />
+    <link rel="stylesheet" href="./hover1.css" />
+    <link rel="stylesheet" href="./loading.css" />
+    <link rel="stylesheet" href="./dropdown.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+  </head>
 
   <body>
     <section class="header">
       <nav class="menu menu-2">
-				<div class="logo">
-					<lottie-player
-						src="https://assets8.lottiefiles.com/packages/lf20_dw8rzsix.json"
-						background="transparent"
-						speed="1"
-						style="width: 100px; height: 100px"
-						loop
-						autoplay
-					>
-					</lottie-player>
-					<p>Weathercaster</p>
-				</div>
-				<ul>
-					<li><a href="./home.html">Home</a></li>
-					<li class="dropdown dropdown-6">
-						<span id="drop_select">More</span>
-						<ul class="dropdown_menu">
-							<li class="dropdown_item-1"><a href="./graph.html">Graph</a></li>
-							<li class="dropdown_item-2"><a href="./astro.html">Astro</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
+        <div class="logo">
+          <lottie-player
+            src="https://assets8.lottiefiles.com/packages/lf20_dw8rzsix.json"
+            background="transparent"
+            speed="1"
+            style="width: 100px; height: 100px"
+            loop
+            autoplay
+          >
+          </lottie-player>
+          <p>Weathercaster</p>
+        </div>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li class="dropdown dropdown-6">
+            <span id="drop_select">More</span>
+            <ul class="dropdown_menu">
+              <li class="dropdown_item-1"><a href="./graph.html">Graph</a></li>
+              <li class="dropdown_item-2"><a href="./astro.html">Astro</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     <section class="content">
@@ -67,10 +67,9 @@
               <div class="beam beam8"></div>
             </div>
           </div>
-          <div id="moon">
-          </div>
+          <div id="moon"></div>
         </div>
-  
+
         <div id="slidecontainer">
           <input
             type="range"
@@ -82,7 +81,7 @@
           />
           <p class="simtime">Simulated time: <span id="demo"></span>:00</p>
         </div>
-  
+
         <div class="clock_container">
           <!-- <div class="sun_fore">
             <i class="fas fa-sun"></i>
@@ -93,9 +92,9 @@
           </div> -->
           <div class="clock">
             <i class="fas fa-clock"></i>
-            <br>
+            <br />
             <span class="date"></span>
-            <br>
+            <br />
             <span class="hms"></span>
             <span class="ampm"></span>
           </div>
@@ -107,7 +106,7 @@
             <span>Set: 11:30 AM</span>
           </div> -->
         </div>
-  
+
         <div id="toggle-label-left">Real-time</div>
         <div class="toggle">
           <div class="switch"></div>
@@ -128,25 +127,32 @@
               <li><a href="./graph.html">Graph</a></li>
               <li><a href="./astro.html">Astro</a></li>
             </ul>
-  
+
             <div class="social mb-4">
               <h3>Stay in touch</h3>
               <ul class="list-unstyled">
                 <li class="in">
-                  <a href="https://www.instagram.com/_thanhd_/"><span class="icon-instagram"><i
-                        class="fab fa-instagram"></i></span></a>
+                  <a href="https://www.instagram.com/_thanhd_/"
+                    ><span class="icon-instagram"
+                      ><i class="fab fa-instagram"></i></span
+                  ></a>
                 </li>
                 <li class="fb">
-                  <a href="https://www.facebook.com/profile.php?id=100021158798849"><span class="icon-facebook"><i
-                        class="fab fa-facebook-f"></i></span></a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100021158798849"
+                    ><span class="icon-facebook"
+                      ><i class="fab fa-facebook-f"></i></span
+                  ></a>
                 </li>
                 <li class="gh">
-                  <a href="#https://github.com/CorkyCroc/CorkyCroc.github.io"><span class="icon-github"><i
-                        class="fab fa-github"></i></span></a>
+                  <a href="#https://github.com/CorkyCroc/CorkyCroc.github.io"
+                    ><span class="icon-github"
+                      ><i class="fab fa-github"></i></span
+                  ></a>
                 </li>
               </ul>
             </div>
-  
+
             <div class="copyright">
               <p class="mb-0">
                 <small>&copy; Weathercaster. All Rights Reserved.</small>
@@ -156,8 +162,6 @@
         </div>
       </div>
     </footer>
-
-
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./clock.js"></script>
