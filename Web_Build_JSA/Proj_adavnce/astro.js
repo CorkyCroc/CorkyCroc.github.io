@@ -82,8 +82,8 @@ function gettimeofday(now) {
     // document.querySelector(".moon_fore").style.color = "#ecf0f1";
   }
   if (hour >= 5 && hour < 7) {
-    // document.body.style.backgroundImage = 'url("./img/Sunrise.png")';
-    document.querySelector(".sun_fore").style.color = "#222f3e";
+    document.body.style.backgroundImage = 'url("./img/Sunrise.png")';
+    // document.querySelector(".sun_fore").style.color = "#222f3e";
     document.querySelector(".clock").style.color = "#222f3e";
     // document.querySelector(".moon_fore").style.color = "#222f3e";
   }
