@@ -387,12 +387,12 @@ body {
 
 .clock_container .clock {
   display: inline-block;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  /* border-left: 1px solid black;
+  border-right: 1px solid black; */
   padding: 0 15px;
 }
 
-.clock_container .sun_fore {
+/* .clock_container .sun_fore {
   display: inline-block;
   padding: 0 15px;
 }
@@ -400,11 +400,9 @@ body {
 .clock_container .moon_fore {
   display: inline-block;
   padding: 0 15px;
-}
+} */
 
-.clock_container .clock i,
-.clock_container .sun_fore i,
-.clock_container .moon_fore i {
+.clock_container .clock i{
   font-size: 30px;
 }
 

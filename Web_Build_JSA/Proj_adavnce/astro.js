@@ -57,9 +57,9 @@ function gettimeofday(now) {
     moon.style.top = "400px";
     var world = document.getElementById("world");
     world.style.borderBottom = "5px solid #7a6021";
-    document.getElementById("toggle-label-left").style.color = "#7a6021";
+    // document.getElementById("toggle-label-left").style.color = "#7a6021";
     document.getElementById("toggle-label-right").style.color = "#7a6021";
-    document.getElementsByClassName("simtime")[0].style.color = "#7a6021";
+    // document.getElementsByClassName("simtime")[0].style.color = "#7a6021";
   }
   if (hour >= 19 && hour <= 24) {
     timeofdaypercent = hour - 20;
@@ -71,39 +71,39 @@ function gettimeofday(now) {
     sun.style.top = "450px";
     var world = document.getElementById("world");
     world.style.borderBottom = "5px solid #67a8f1";
-    document.getElementById("toggle-label-left").style.color = "#d3d3d3";
+    // document.getElementById("toggle-label-left").style.color = "#d3d3d3";
     document.getElementById("toggle-label-right").style.color = "#d3d3d3";
-    document.getElementsByClassName("simtime")[0].style.color = "#d3d3d3";
+    // document.getElementsByClassName("simtime")[0].style.color = "#d3d3d3";
   }
   if (hour >= 0 && hour < 5) {
     document.body.style.backgroundImage = 'url("./img/Night.png")';
-    document.querySelector(".sun_fore").style.color = "#ecf0f1";
+    // document.querySelector(".sun_fore").style.color = "#ecf0f1";
     document.querySelector(".clock").style.color = "#ecf0f1";
-    document.querySelector(".moon_fore").style.color = "#ecf0f1";
+    // document.querySelector(".moon_fore").style.color = "#ecf0f1";
   }
   if (hour >= 5 && hour < 7) {
-    document.body.style.backgroundImage = 'url("./img/Sunrise.png")';
+    // document.body.style.backgroundImage = 'url("./img/Sunrise.png")';
     document.querySelector(".sun_fore").style.color = "#222f3e";
     document.querySelector(".clock").style.color = "#222f3e";
-    document.querySelector(".moon_fore").style.color = "#222f3e";
+    // document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 7 && hour < 17) {
     document.body.style.backgroundImage = 'url("./img/Day.png")';
-    document.querySelector(".sun_fore").style.color = "#222f3e";
+    // document.querySelector(".sun_fore").style.color = "#222f3e";
     document.querySelector(".clock").style.color = "#222f3e";
-    document.querySelector(".moon_fore").style.color = "#222f3e";
+    // document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 17 && hour < 19) {
     document.body.style.backgroundImage = 'url("./img/Evening.png")';
-    document.querySelector(".sun_fore").style.color = "#222f3e";
+    // document.querySelector(".sun_fore").style.color = "#222f3e";
     document.querySelector(".clock").style.color = "#222f3e";
-    document.querySelector(".moon_fore").style.color = "#222f3e";
+    // document.querySelector(".moon_fore").style.color = "#222f3e";
   }
   if (hour >= 19 && hour <= 24) {
     document.body.style.backgroundImage = 'url("./img/Night.png")';
-    document.querySelector(".sun_fore").style.color = "#ecf0f1";
+    // document.querySelector(".sun_fore").style.color = "#ecf0f1";
     document.querySelector(".clock").style.color = "#ecf0f1";
-    document.querySelector(".moon_fore").style.color = "#ecf0f1";
+    // document.querySelector(".moon_fore").style.color = "#ecf0f1";
   }
 }
 
