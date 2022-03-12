@@ -10,7 +10,7 @@ form_submit.onsubmit = function (sub) {
 
   form_submit.city.value = "";
 
-  localStorage.setItem('key', key);
+  localStorage.setItem("key", key);
 };
 
 let getCity = async (city) => {
@@ -57,7 +57,8 @@ let getCity = async (city) => {
           >
         </div>
         <div class="humidity">
-            <i class="far fa-humidity" style="user-select: auto"></i
+        <span
+        ><i class="far fa-humidity" style="user-select: auto"></i
             >Humidity: ${data.current.humidity + "%"}</span
           >
         </div>
@@ -78,7 +79,9 @@ let getCity = async (city) => {
               class="far fa-thermometer-three-quarters"
               style="user-select: auto"
             ></i
-            >Max:${Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "℃"}</span
+            >Max:${
+              Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "℃"
+            }</span
           >
         </div>
         <div class="mintemp">
@@ -87,7 +90,9 @@ let getCity = async (city) => {
               class="far fa-thermometer-quarter"
               style="user-select: auto"
             ></i
-            >Min:${Math.round(data.forecast.forecastday[1].day.mintemp_c) + "℃"}℃</span
+            >Min:${Math.round(
+              data.forecast.forecastday[1].day.mintemp_c
+            ) + "℃"}</span
           >
         </div>
         <div class="rain">
@@ -115,7 +120,9 @@ let getCity = async (city) => {
               class="far fa-thermometer-three-quarters"
               style="user-select: auto"
             ></i
-            >Max:${Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "℃"}</span
+            >Max:${
+              Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "℃"
+            }</span
           >
         </div>
         <div class="mintemp">
@@ -124,7 +131,9 @@ let getCity = async (city) => {
               class="far fa-thermometer-quarter"
               style="user-select: auto"
             ></i
-            >Min:${Math.round(data.forecast.forecastday[2].day.mintemp_c) + "℃"}</span
+            >Min:${
+              Math.round(data.forecast.forecastday[2].day.mintemp_c) + "℃"
+            }</span
           >
         </div>
         <div class="rain">
@@ -143,5 +152,3 @@ let getCity = async (city) => {
 
   document.querySelector(".info_search").innerHTML = html;
 };
-
-
