@@ -92,7 +92,7 @@ let getCity = async (city) => {
             ></i
             >Min:${Math.round(
               data.forecast.forecastday[1].day.mintemp_c
-            ) + "℃"}</span
+            ) + '℃'}</span
           >
         </div>
         <div class="rain">
