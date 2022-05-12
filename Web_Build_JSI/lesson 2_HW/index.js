@@ -604,9 +604,14 @@ let arrayObject = [
 
 
 let arrFilter = arrayObject.filter((item, index) => {
-    if (item.id < 50) {
-        return item
-    } else{}
-})
-console.log(arrFilter);
+    // if (item.id < 50) {
+    //     console.log(item.title);
+    // } else{}
 
+    return item.id < 50 ? console.log(item.title) : "";
+})
+
+
+// let arrMap = arrayObject.map((item, index) => {
+//     item.id < 50 ? console.log(item.title) : "";
+// })
