@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The revolution</title>
     <link rel="stylesheet" href="./home.css" />
     <link rel="stylesheet" href="./dropdown.css" />
-    <title>The revolution</title>
-    <link
-      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="header">
-      <nav class="menu menu-2">
-        <div class="logo">
-          <lottie-player
-            src="https://assets3.lottiefiles.com/packages/lf20_rllvgcn2.json"
-            background="transparent"
-            speed="1"
-            style="width: 200px; height: 200px"
-            loop
-            autoplay
-          ></lottie-player>
-          <p>The revolution</p>
-        </div>
-        <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="">About us</a></li>
-        </ul>
-      </nav>
+    <link rel="stylesheet" href="./hover1.css" />
+    <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
 
-      <div class="intro">
-        <div class="left">
-          <p>Lời mở đầu</p>
-          <p>
-            Kể từ sau Diễn đàn kinh tế thế giới năm 2017 tại Đa-vốt Thụy Sĩ,
-            trên thế giới và ở Việt Nam nổi lên một chủ đề nóng, bàn về cuộc
-            cách mạng công nghiệp lần thứ tư
-          </p>
+<body>
+    <section class="header">
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_rllvgcn2.json"
+                        background="transparent" speed="1" style="width: 200px; height: 100px" loop autoplay>
+                    </lottie-player>
+                    <a href="#">The Revolution</a>
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="intro">
+            <div class="left">
+                <p>Lời mở đầu</p>
+                <p>
+                    Kể từ sau Diễn đàn kinh tế thế giới năm 2017 tại Đa-vốt Thụy Sĩ,
+                    trên thế giới và ở Việt Nam nổi lên một chủ đề nóng, bàn về cuộc
+                    cách mạng công nghiệp lần thứ tư
+                </p>
+            </div>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_zrqthn6o.json" background="transparent"
+                speed="1" style="width: 900px; height: 900px" autoplay></lottie-player>
         </div>
-        <lottie-player
-          src="https://assets1.lottiefiles.com/packages/lf20_zrqthn6o.json"
-          background="transparent"
-          speed="1"
-          style="width: 900px; height: 900px"
-          autoplay
-        ></lottie-player>
-      </div>
     </section>
 
     <section class="cause">
-
+        <div class="title">
+            <h5 class="rotate">Nguyên</h5>
+            <h5 class="spin">nhân</h5>
+        </div>
+            <div class="book">
+              <div class="page">
+                <div class="page__1">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="page__2">
+                    <p>trước những thách thức như biến đổi khí hậu, già hóa dân số hay các vấn đề an ninh khác ngày càng tăng lên.</p>
+                </div>
+              </div>
+            </div>
     </section>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./home.js"></script>
-    <script>
-      window.addEventListener("scroll", function () {
-        let header = document.querySelector("nav");
-        let windowPosition = window.scrollY > 0;
-        header.classList.toggle("scrolling-active", windowPosition);
-      });
-    </script>
-  </body>
+</body>
+
 </html>
