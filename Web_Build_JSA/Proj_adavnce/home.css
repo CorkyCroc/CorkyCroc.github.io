@@ -75,12 +75,6 @@ body {
 	transition: 1s;
 }
 
-.scrolling-active ul li span {
-	font-size: 20px !important;
-	color: #34495e !important;
-	transition: 1s;
-}
-
 .scrolling-active .nav {
 	height: 6.6rem;
 }
