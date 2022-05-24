@@ -9,8 +9,6 @@
 }
 
 body {
-  background-size: cover;
-  background-attachment: fixed;
   height: 5000px;
   background-color: red;
 }
@@ -421,12 +419,17 @@ img {
 
 .timeline img {
   max-width: 100%;
+  order: 2;
 }
 
 .timeline {
+  order: 1;
   text-align: center;
-  /* background: black; */
-  height: 85vh;
+  background: black;
+  height: 90vh;
+  background-image: url("./img/IWW - Better.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .timeline .year {
   display: inline-block;
@@ -462,6 +465,7 @@ img {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  /* background-image: url("./img/IWW - Better.jpeg"); */
 }
 .timeline .days .day {
   width: 100%;
