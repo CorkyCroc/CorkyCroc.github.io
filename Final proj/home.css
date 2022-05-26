@@ -10,11 +10,11 @@
 
 body {
   height: 5000px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .header {
-  background-image: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
   max-width: 100%;
   height: 90vh;
 }
@@ -237,7 +237,7 @@ body {
   background-size: 200% auto;
   color: #222f3e;
   display: inline-block;
-  width: 500px;
+  max-width: 100%;
   font-size: 6vw;
   font-style: bold;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
@@ -425,7 +425,7 @@ img {
 .timeline {
   text-align: center;
   background: black;
-  height: 23.5%;
+  height: 25%;
   background-image: url("./img/IWW - Better.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -434,17 +434,20 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 .timeline .year {
-  display: inline-block!important;
+  display: inline-block !important;
   font-size: 36px;
   font-weight: bold;
   position: relative;
 }
+
 .timeline .year span {
   display: inline-block !important;
   padding-bottom: 6px;
   color: whitesmoke;
 }
+
 .timeline .year:after {
   content: "";
   display: block;
@@ -453,6 +456,7 @@ img {
   height: 1px;
   background: #2c3e50;
 }
+
 .timeline .year--end:before {
   content: "";
   display: block;
@@ -461,6 +465,7 @@ img {
   height: 1px;
   background: #2c3e50;
 }
+
 .timeline .year--end:after {
   content: none;
 }
@@ -478,11 +483,14 @@ img {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
+
 .timeline .days .day {
   width: 100%;
   float: left;
 }
+
 .timeline .days .day .events {
   position: relative;
   float: left;
@@ -492,11 +500,7 @@ img {
   text-align: right;
   width: 50%;
 }
-.timeline .days .day:nth-child(2) .events p
-.timeline .days .day:nth-child(4) .events p{
-  width: 100%;
-  background: red;
-}
+
 .timeline .days .day .events:after {
   content: "";
   width: 40%;
@@ -506,6 +510,7 @@ img {
   position: absolute;
   right: 0;
 }
+
 .timeline .days .day .events .date {
   position: absolute;
   top: 50%;
@@ -517,17 +522,20 @@ img {
   font-size: 24px;
   white-space: nowrap;
 }
+
 .timeline .days .day .events .day__img {
   margin-right: -30px;
   position: relative;
   overflow: hidden;
 }
+
 .timeline .days .day .events .day__img img {
   display: block;
   float: right;
   max-width: 20rem;
   max-height: 25rem;
 }
+
 .timeline .days .day .events .day__img .caption {
   position: absolute;
   margin: 0;
@@ -540,6 +548,7 @@ img {
   color: #fff;
   width: 100%;
 }
+
 .timeline .days .day:nth-child(odd) .events {
   width: calc(50% + 1px);
   float: right;
@@ -547,24 +556,64 @@ img {
   border-left: 1px solid #2c3e50;
   text-align: left;
 }
+
 .timeline .days .day:nth-child(odd) .events:after {
   right: auto;
   left: 0;
 }
+
 .timeline .days .day:nth-child(odd) .events .date {
   left: auto;
   right: 100%;
   text-align: right;
 }
+
 .timeline .days .day:nth-child(odd) .events .day__img {
   margin-right: auto;
   margin-left: -30px;
 }
+
 .timeline .days .day:nth-child(odd) .events .day__img img {
   float: left;
 }
+
 .timeline .days .day:nth-child(odd) .events .day__img .caption {
   right: auto;
   left: 0;
 }
 
+.compare{
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+  height: 70vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide {
+  width: 60%;
+  height:50%;
+  border-radius: 50px;
+  border-radius: 50px;
+  background: #fff;
+  opacity: 0.75;
+}
+
+.compare .splide .splide__track{
+  background: red;
+  height: 100%;
+}
+
+
+
+.my-slider-progress {
+  background: #ccc;
+}
+
+.my-slider-progress-bar {
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+  height: 5px;
+  transition: width 400ms ease;
+  width: 0;
+}
