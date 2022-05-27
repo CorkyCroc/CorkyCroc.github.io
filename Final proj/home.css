@@ -256,7 +256,7 @@ body {
 }
 
 .intro img {
-  float: left;
+  float: right;
   width: 34vw;
   height: auto;
   /* padding-left: 20%; */
@@ -582,8 +582,12 @@ body {
   left: 0;
 }
 
-.compare{
-  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+.carousel{
+  /* background: linear-gradient(to bottom right, #bdc3c7, #2c3e50); */
+  background: url("./img/aideal-hwa-OYzbqk2y26c-unsplash copy.jpg by Paullus23 on DeviantArt.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 70vh;
   width: 100%;
   display:flex;
@@ -600,27 +604,40 @@ body {
 }
 
 .splide .splide__track{
-  background: red;
+  /* background: red; */
   height: 100%;
 }
-
-.splide .splide__track .splide__list:nth-child(1) > ul{
+.splide__slide > h3 {
+  text-align: center;
+  font-size: 30px;
 }
 
-.splide .splide__track .splide__list:nth-child(1) ul{
-  background: #fff;
-  border-radius: 5px;
-  padding:10px;
-  display: inline-block;
-  list-style: none;
+.splide__list:nth-child(1){
+  display: flex;
 }
 
-/* .splide .splide__track .splide__list:nth-child(1) ul:first-child{
-  background: #fff;
-} */
+.splide__list:nth-child(1) .left{
+  /* background:red; */
+  width: 50%;
+  height: 85%;
+  float: left;
+  display:flex;
+  align-items: center;
+  margin: 0;
+}
+
+.splide__list:nth-child(1) img {
+  float: right;
+  width: 45%;
+  height: auto;
+  display: flex;
+  margin: 15px 15px 0 0;
+}
 
 .my-slider-progress {
   background: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .my-slider-progress-bar {
