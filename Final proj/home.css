@@ -255,7 +255,7 @@ body {
   color: white;
 }
 
-img {
+.intro img {
   float: left;
   width: 34vw;
   height: auto;
@@ -593,19 +593,31 @@ img {
 
 .splide {
   width: 60%;
-  height:50%;
+  height:60%;
   border-radius: 50px;
   border-radius: 50px;
-  background: #fff;
-  opacity: 0.75;
+  background: rgba(245, 246, 250,0.75);
 }
 
-.compare .splide .splide__track{
+.splide .splide__track{
   background: red;
   height: 100%;
 }
 
+.splide .splide__track .splide__list:nth-child(1) > ul{
+}
 
+.splide .splide__track .splide__list:nth-child(1) ul{
+  background: #fff;
+  border-radius: 5px;
+  padding:10px;
+  display: inline-block;
+  list-style: none;
+}
+
+/* .splide .splide__track .splide__list:nth-child(1) ul:first-child{
+  background: #fff;
+} */
 
 .my-slider-progress {
   background: #ccc;
