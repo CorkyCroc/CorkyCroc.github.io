@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 5000px;
+  /* height: 5000px; */
   /* background-color: red; */
 }
 
@@ -241,6 +241,7 @@ body {
   font-size: 6vw;
   font-style: bold;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+  animation: backInDown;
 }
 
 @keyframes textclip {
@@ -430,6 +431,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -582,62 +584,80 @@ body {
   left: 0;
 }
 
-.carousel{
-  /* background: linear-gradient(to bottom right, #bdc3c7, #2c3e50); */
-  background: url("./img/aideal-hwa-OYzbqk2y26c-unsplash copy.jpg by Paullus23 on DeviantArt.jpeg");
+.carousel {
+  background: linear-gradient(to bottom left, #232526 25%, #414345 60%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 70vh;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .splide {
   width: 60%;
-  height:60%;
+  height: 65%;
   border-radius: 50px;
   border-radius: 50px;
-  background: rgba(245, 246, 250,0.75);
+  background: rgba(245, 246, 250, 0.75);
 }
 
-.splide .splide__track{
+.splide .splide__track {
   /* background: red; */
   height: 100%;
+}
+.splide__list {
+  display: flex;
 }
 .splide__slide > h3 {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 10px;
 }
 
-.splide__list:nth-child(1){
-  display: flex;
-}
-
-.splide__list:nth-child(1) .left{
+.splide__list .splide__slide .left {
   /* background:red; */
   width: 50%;
   height: 85%;
   float: left;
-  display:flex;
+  display: flex;
   align-items: center;
   margin: 0;
+  font-size: 1vw;
 }
 
-.splide__list:nth-child(1) img {
+.splide__list .splide__slide img {
   float: right;
   width: 45%;
   height: auto;
   display: flex;
-  margin: 15px 15px 0 0;
+  margin: 0 15px 0 0;
+}
+
+.row_grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 4px;
+  height: 85%;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 20rem;
+  max-height: 10rem;
 }
 
 .my-slider-progress {
   background: #ccc;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .my-slider-progress-bar {
@@ -645,4 +665,93 @@ body {
   height: 5px;
   transition: width 400ms ease;
   width: 0;
+}
+
+.footer-07 .container {
+  min-width: 992px !important;
+}
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+.ftco-footer-social li {
+  list-style: none;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.ftco-footer-social li a {
+  height: 40px;
+  width: 40px;
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  position: relative;
+}
+.ftco-footer-social li a span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ftco-footer-social li a:hover {
+  color: #fff;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.col-md-12{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.text-center {
+  text-align: center !important;
+}
+.footer-07 .container {
+  min-width: 992px !important;
+  padding: 5rem 0 !important;
+}
+.footer-07 {
+  background: #121212 !important;
+}
+.footer-07 a {
+  color: #a3de83;
+}
+.footer-07 p {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-07 .footer-heading {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.footer-07 .footer-heading .logo {
+  color: #fff;
+}
+.footer-07 .menu {
+  margin-bottom: 30px;
+  display:flex;
+  justify-content: center;
+}
+.footer-07 .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer-07 .ftco-footer-social li a {
+  background: transparent;
+  border: 1px solid #a3de83;
 }
