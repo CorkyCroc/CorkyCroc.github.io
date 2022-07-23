@@ -100,8 +100,6 @@
           </fieldset>
         </form>
       </div> -->
-
-      <div class="showFile_wrapper" id="showFile_wrapper"></div>
     </section>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -149,6 +147,9 @@
             const progress =
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log("Upload is " + progress + "% done");
+            if(progress==100) {
+                alert("Your file has finished uploading")
+            }
             switch (snapshot.state) {
               case "paused":
                 console.log("Upload is paused");
@@ -189,7 +190,7 @@
         let file = JSON.parse(localStorage.getItem("file"));
         console.log(file);
         if (file) {
-            fileList.push(file);
+          fileList.push(file);
         }
         renderData(fileList);
       };
