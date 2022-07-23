@@ -14,7 +14,7 @@ form.onsubmit = function signUp(e) {
 
   localStorage.setItem("user", JSON.stringify(user));
   console.log("asfasdas");
-  setTimeout(() => {window.open("../signin/signin.html", "_self")}, 3000)
+  setTimeout(() => {window.open("../signin/signin.html", "_self")}, 2000)
 };
 
 // form.onsubmit = function redirect(e) {

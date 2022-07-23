@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Scoresaver</title>
+    <link
+      href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./profile.css" />
   </head>
   <body>
@@ -40,14 +44,174 @@
 
     <section class="user" id="user">
       <img src="../img/1_W35QUSvGpcLuxPo3SRTH4w.png" alt="" />
-      <div class="info">
-      </div>
+      <div class="info"></div>
     </section>
 
     <section class="file">
-        
+      <div class="upload">
+        <form class="form">
+          <div class="file-upload-wrapper" id="file-upload-wrapper">
+            <input
+              name="file-upload-field"
+              type="file"
+              class="file-upload-field"
+              id="input"
+              value=""
+              accept=".pdf"
+              multiple
+            />
+          </div>
+        </form>
+        <button class="noselect" id="btn">
+          <span class="text">Upload</span
+          ><span class="icon"><i class="fas fa-upload icon"></i></span>
+        </button>
+        <button class="noselect-2" id="btn_d">
+          <span class="text">Get Download Link</span
+          ><span class="icon"><i class="fas fa-upload icon"></i></span>
+        </button>
+      </div>
+
+      <!-- <div class="s006">
+        <form id="search_form">
+          <fieldset>
+            <div class="inner-form">
+              <div class="input-field">
+                <button class="btn-search" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                    ></path>
+                  </svg>
+                </button>
+                <input
+                  type="text"
+                  name="file"
+                  id="search"
+                  placeholder="Enter sheet name"
+                />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div> -->
+
+      <div class="showFile_wrapper" id="showFile_wrapper"></div>
     </section>
 
     <script src="./profile.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+      import {
+        getStorage,
+        ref,
+        uploadBytesResumable,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyCrCj_IuS3BIloZLgbKeWr_A87rN6RMo3c",
+        authDomain: "intensive-proj.firebaseapp.com",
+        projectId: "intensive-proj",
+        storageBucket: "intensive-proj.appspot.com",
+        messagingSenderId: "926435109589",
+        appId: "1:926435109589:web:74ea5a272f8a36c470105c",
+        measurementId: "G-NHDHC3CJL5",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const storage = getStorage();
+
+      const btn = document.getElementById("btn");
+
+      btn.onclick = function fileWork(e) {
+        const file = document.getElementById("input").files[0];
+        const storageRef = ref(storage, "files/" + file.name);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+        // const uuidv4 = require("uuid-v4");
+        // const uuid = uuidv4();
+        // const metadata = {
+        //   firebaseStorageDownloadTokens: uuid,
+        // };
+
+        // console.log(metadata);
+
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            const progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload is " + progress + "% done");
+            switch (snapshot.state) {
+              case "paused":
+                console.log("Upload is paused");
+                break;
+              case "running":
+                console.log("Upload is running");
+                break;
+            }
+          },
+          (error) => {
+            switch (error.code) {
+              case "storage/unauthorized":
+                break;
+              case "storage/canceled":
+                break;
+              case "storage/unknown":
+                break;
+            }
+          },
+          () => {
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              console.log("File available at", downloadURL);
+              let fileInfo = {
+                name: file.name,
+                url: downloadURL,
+              };
+              localStorage.setItem(`file`, JSON.stringify(fileInfo));
+            });
+          }
+        );
+      };
+
+      const btn_d = document.getElementById("btn_d");
+
+      btn_d.onclick = function fileCompletion(e) {
+        let fileList = [];
+        // let file = localStorage.getItem("file");
+        let file = JSON.parse(localStorage.getItem("file"));
+        console.log(file);
+        if (file) {
+            fileList.push(file);
+        }
+        renderData(fileList);
+      };
+
+      let renderData = (data) => {
+        let dom = document.getElementById("showFile_wrapper");
+        dom.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+          let html = `        <div class="showFile">
+            <div class="content">
+              <h1>${data[i].name}</h1>
+              <a href="${data[i].url}" class="">
+                <button class="noselect" id="btn">
+                  <span class="text">Download</span
+                  ><span class="icon"><i class="fas fa-download"></i></i></span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>`;
+          dom.innerHTML += html;
+        }
+      };
+    </script>
   </body>
 </html>

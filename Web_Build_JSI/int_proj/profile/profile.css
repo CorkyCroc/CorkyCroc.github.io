@@ -219,39 +219,362 @@ body {
   width: 100%;
   height: 20vh;
   background: #3498db;
-  position: absolute;
 }
 .user img {
   width: auto;
   height: 90%;
   border-radius: 50%;
-  position: relative; 
+  position: relative;
   top: 50%;
-  right:-24%;
+  right: -24%;
   /* margin: 0 0 0 15vw; */
   transform: translate(-50%, -50%);
   display: inline-block;
   float: left;
   margin: 0;
+  padding: 0 15px 0 0;
 }
-.user .info{
-    width: 50%;
-    height: 100%;
-    /* background: red; */
-    display: inline-block;
-    position: relative;
-    left: 19%;
-    margin: 0;
-    padding: 0;
+.user .info {
+  width: 50%;
+  height: 100%;
+  /* background: red; */
+  display: inline-block;
+  position: relative;
+  left: 19%;
+  margin: 0;
+  padding: 0;
 }
-.user .info p{
-    color: #fff;
-    padding: 0 0 15px 0;
+.user .info p {
+  color: #fff;
+  padding: 0 0 15px 0;
 }
-.user .info p:first-child{
-    font-size: 3vw;
+.user .info p:first-child {
+  font-size: 3vw;
 }
 .user .info p:nth-child(2),
-.user .info p:nth-child(3){
-    font-size: 1.25vw
+.user .info p:nth-child(3) {
+  font-size: 1.25vw;
+}
+
+.file {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  top: 10%;
+}
+
+.upload {
+  width: 100%;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form {
+  width: 400px;
+}
+
+.file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+:root {
+  --pseudo-text: "Select your PDF music sheet";
+}
+.file-upload-wrapper:after {
+  content: var(--pseudo-text);
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: whitesmoke;
+  padding: 10px 15px;
+  display: block;
+  width: calc(100% - 40px);
+  pointer-events: none;
+  z-index: 20;
+  height: 40px;
+  line-height: 40px;
+  color: #999;
+  border-radius: 5px 10px 10px 5px;
+  font-weight: 300;
+  overflow: hidden;
+}
+.file-upload-wrapper:before {
+  content: "Browse";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 60px;
+  background: #00a8ff;
+  color: #fff;
+  font-weight: 700;
+  z-index: 25;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+  transition: 0.5s ease;
+}
+.file-upload-wrapper:hover:before {
+  background: #3498db;
+  transition: 0.5s ease;
+}
+.file-upload-wrapper input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.noselect {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #0984e3;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #0984e3;
+}
+
+.noselect,
+.noselect span {
+  transition: 200ms;
+}
+
+.noselect .text {
+  transform: translateX(65px);
+  color: white;
+  font-weight: bold;
+}
+
+.noselect .icon {
+  position: absolute;
+  border-right: 1px solid #74b9ff;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect i {
+  width: 15px;
+  fill: #eee;
+}
+
+.noselect:hover {
+  background: #00a8ff;
+}
+
+.noselect:hover .text {
+  color: transparent;
+}
+
+.noselect:hover .icon {
+  width: 150px;
+  border-right: none;
+  transform: translateX(0);
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.noselect-2 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .noselect-2 {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #0984e3;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #0984e3;
+  }
+  
+  .noselect-2,
+  .noselect-2 span {
+    transition: 200ms;
+  }
+  
+  .noselect-2 .text {
+    transform: translateX(65px);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .noselect-2 .icon {
+    position: absolute;
+    border-right: 1px solid #74b9ff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .noselect-2 i {
+    width: 15px;
+    fill: #eee;
+  }
+  
+  .noselect-2:hover {
+    background: #00a8ff;
+  }
+  
+  .noselect-2:hover .text {
+    color: transparent;
+  }
+  
+  .noselect-2:hover .icon {
+    width: 200px;
+    border-right: none;
+    transform: translateX(0);
+  }
+  
+  .noselect-2:focus {
+    outline: none;
+  }
+
+/* .s006 {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.s006 form {
+  width: 100%;
+  max-width: 300px;
+}
+form,
+fieldset {
+  border: none;
+}
+
+.s006 form .inner-form .input-field {
+  height: 65px;
+  width: 100%;
+  position: relative;
+  outline: none;
+}
+
+.s006 form .inner-form .input-field input {
+  height: 70%;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  background: whitesmoke;
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  font-size: 18px;
+  color: #666;
+  border-radius: 34px;
+}
+
+.s006 form .inner-form .input-field .btn-search {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 13%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .s006 form .inner-form .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .s006 form .inner-form .input-field input {
+    padding-left: 55px;
+    font-size: 16px;
+  }
+  .s006 form .inner-form .input-field .btn-search svg {
+    width: 26px;
+    height: 26px;
+  }
+} */
+
+.showFile_wrapper {
+  width: 100%;
+  height: 10vh;
+  /* background:yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.showFile {
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px 2px 15px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.showFile .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showFile .content h1 {
+  text-align: center;
+  font-size: 2vw;
+  overflow: hidden;
+}
+.showFile a{
+    text-decoration: none;
 }

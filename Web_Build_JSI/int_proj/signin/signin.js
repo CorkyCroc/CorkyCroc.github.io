@@ -7,14 +7,6 @@ form.onsubmit = function signIn(e) {
 
   let data = JSON.parse(localStorage.getItem("user"));
   console.log(data);
-  //   if (name != data.name || passw != data.pass) {
-  //     alert("Wrong username/password");
-  //   } else if ( passw != data.pass && name != data.name) {
-  //     alert("Wrong username/password");
-  //   } else {
-  //     alert("You have logged in");
-  //     let valid = 1;
-  //   }
 
   if (data.name == name) {
     if (data.pass == passw) {
@@ -26,11 +18,18 @@ form.onsubmit = function signIn(e) {
       setTimeout(() => {
         window.open("../home/home.html", "_self");
       }, 1000);
+
+      name.your_name.value = "";
+      passw.your_pass.value = "";
     } else {
       alert("Wrong password");
+      name.your_name.value = "";
+      passw.your_pass.value = "";
     }
   } else {
     alert("Name is not exist");
+    name.your_name.value = "";
+    passw.your_pass.value = "";
   }
 };
 
@@ -39,25 +38,3 @@ let usersList = [];
 if (users) {
   usersList = JSON.parse(localStorage.getItem("user"));
 }
-
-// form.onsubmit = function (e) {
-//   e.preventDefault();
-
-//   let name = form.your_name.value;
-//   let password = form.your_pass.value;
-
-//   for (let i = 0; i < usersList.length; i++) {
-//     if (usersList[i].name == name) {
-//       if (usersList[i].pass == password) {
-//         alert("success")
-//         setTimeout(function(){ window.open("../home/home.html", "_self"); }, 2000);
-
-//       } else {
-//         alert("wrong password")
-//       }
-//       break;
-//     } else {
-//         alert("email is not exist")
-//     }
-//   }
-// };
