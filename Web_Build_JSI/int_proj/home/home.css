@@ -261,6 +261,8 @@ body {
   width: 200vw;
   height: 84.5vh;
   margin-top: 150px;
+  position: relative;
+  right: 6.5%;
   display: flex;
   align-items: center;
   margin-bottom: 0.75vh;
