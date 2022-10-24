@@ -69,7 +69,7 @@
         </button>
         <button class="noselect-2" id="btn_d">
           <span class="text">Get Download Link</span
-          ><span class="icon"><i class="fas fa-upload icon"></i></span>
+          ><span class="icon"><i class="fas fa-link"></i></i></span>
         </button>
       </div>
 
@@ -101,6 +101,7 @@
           </fieldset>
         </form>
       </div> -->
+      <div class="showFile_wrapper"></div>
     </section>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -197,8 +198,6 @@
       };
 
       let renderData = (data) => {
-        let dom = document.getElementById("showFile_wrapper");
-        dom.innerHTML = "";
         for (let i = 0; i < data.length; i++) {
           let html = `        <div class="showFile">
             <div class="content">
@@ -212,7 +211,7 @@
             </div>
           </div>
         </div>`;
-          dom.innerHTML += html;
+        document.querySelector(".showFile_wrapper").innerHTML += html
         }
       };
     </script>
